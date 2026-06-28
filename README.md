@@ -11,7 +11,8 @@ app to read, create, extract, and organize your PDF library on Windows, macOS, a
 This repository serves two purposes:
 
 1. **Documentation site** — the source for <https://wiki.pdfbook.app>, built with
-   [Astro Starlight](https://starlight.astro.build) and deployed to GitHub Pages.
+   [Astro Starlight](https://starlight.astro.build) and deployed to Vercel
+   (zero-config: Vercel auto-detects Astro, runs `astro build`, serves `dist`).
 2. **Release distribution** — installers for every platform are published to the
    GitHub Releases of this repository.
 
