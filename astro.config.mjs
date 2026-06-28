@@ -11,6 +11,8 @@ export default defineConfig({
       title: "PDFBook",
       description:
         "Read, create, extract, and organize your PDF library — a fast, private desktop app for Windows, macOS, and Linux.",
+      // Modern monochrome theme + native-element overrides (scrollbar, select).
+      customCss: ["./src/styles/custom.css"],
       // English lives at the root path (/) for the widest search reach;
       // Japanese is served under /ja/. Pages without a Japanese translation
       // fall back to English automatically.
