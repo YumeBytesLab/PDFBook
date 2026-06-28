@@ -7,6 +7,16 @@
  * selection and focus rings — so nothing reintroduces colour or an OS look.
  */
 
+/* ---------- Typography ---------- */
+/* Self-hosted Inter, matching the app and the pdfbook.app landing page. */
+:root {
+  --sl-font: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* Tight tracking on headings — the same display feel as pdfbook.app. */
+:is(h1, h2, h3, .site-title) {
+  letter-spacing: -0.02em;
+}
+
 /* ---------- Palette: dark theme (default) ---------- */
 :root {
   --sl-color-white: hsl(0, 0%, 100%);
@@ -39,6 +49,10 @@
   --sl-color-accent-low: hsl(0, 0%, 86%);
   --sl-color-accent: hsl(0, 0%, 36%);
   --sl-color-accent-high: hsl(0, 0%, 13%);
+
+  /* Warm off-white page background like pdfbook.app (#FAFAFA) instead of pure
+   * white, so content surfaces read as gently layered. */
+  --sl-color-bg: hsl(0, 0%, 98%);
 }
 
 /* Crisp monochrome brand title (drop the accent tint). */
@@ -77,41 +91,12 @@
   background: var(--sl-color-gray-4);
 }
 
-/* ---------- Native <select> dropdowns (theme & language pickers) ---------- */
-/* Starlight already sets appearance:none and overlays its own caret icon; we
- * give the control a flat, bordered monochrome look instead of the OS widget. */
-.sl-select-wrapper select,
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: var(--sl-color-black);
-  color: var(--sl-color-gray-1);
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
-  padding-block: 0.4em;
-  padding-inline: 0.7em 2em;
-  font: inherit;
-  line-height: 1.2;
-  cursor: pointer;
-  transition:
-    border-color 0.15s ease,
-    background-color 0.15s ease;
-}
-.sl-select-wrapper select:hover,
-select:hover {
-  border-color: var(--sl-color-gray-3);
-  background-color: var(--sl-color-gray-6);
-}
-.sl-select-wrapper select:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--sl-color-white);
-  outline-offset: 1px;
-}
-/* The dropdown option list, where the browser honours custom colours. */
-select option {
-  background: var(--sl-color-black);
-  color: var(--sl-color-gray-1);
-}
+/* ---------- Dropdowns (theme & language pickers) ---------- */
+/* Starlight's <select> positions a leading icon absolutely and reserves left
+ * padding for it via calc(); we deliberately DON'T re-pad or re-box the control
+ * (an earlier override did and the icon overlapped the label). Its colours come
+ * straight from the monochrome palette above, so it stays Starlight's native,
+ * accessible control — just grayscale. The open option list is the browser's. */
 
 /* ---------- Focus rings (monochrome) ---------- */
 :focus-visible {
@@ -126,4 +111,18 @@ select option {
   background-color: var(--sl-color-gray-6) !important;
   color: var(--sl-color-white) !important;
   border: 1px solid var(--sl-color-gray-5);
+}
+
+/* ---------- pdfbook.app accents (kept subtle, still wiki-first) ---------- */
+/* Softer rounding + a whisper of shadow on cards, echoing the landing page's
+ * rounded-2xl surfaces — without turning the docs into a marketing page. */
+.card {
+  border-radius: 0.875rem;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(0, 0, 0, 0.03);
+}
+/* Splash-page hero CTAs as pills, like the pdfbook.app buttons. */
+.sl-link-button {
+  border-radius: 999px;
 }

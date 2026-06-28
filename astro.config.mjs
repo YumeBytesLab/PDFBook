@@ -11,8 +11,9 @@ export default defineConfig({
       title: "PDFBook",
       description:
         "Read, create, extract, and organize your PDF library — a fast, private desktop app for Windows, macOS, and Linux.",
-      // Modern monochrome theme + native-element overrides (scrollbar, select).
-      customCss: ["./src/styles/custom.css"],
+      // Self-hosted Inter (matches the app + pdfbook.app), then the monochrome
+      // theme + native-element overrides. Font CSS must load before custom.css.
+      customCss: ["@fontsource-variable/inter/index.css", "./src/styles/custom.css"],
       // English lives at the root path (/) for the widest search reach;
       // Japanese is served under /ja/. Pages without a Japanese translation
       // fall back to English automatically.
