@@ -1,0 +1,129 @@
+/*
+ * PDFBook docs — modern monochrome theme.
+ *
+ * Starlight's default palette is tinted blue (hue 224). Here we desaturate the
+ * whole ramp to a neutral grayscale (saturation 0%) for both themes, then
+ * restyle the native browser chrome — scrollbars, <select> dropdowns, text
+ * selection and focus rings — so nothing reintroduces colour or an OS look.
+ */
+
+/* ---------- Palette: dark theme (default) ---------- */
+:root {
+  --sl-color-white: hsl(0, 0%, 100%);
+  --sl-color-gray-1: hsl(0, 0%, 93%);
+  --sl-color-gray-2: hsl(0, 0%, 76%);
+  --sl-color-gray-3: hsl(0, 0%, 55%);
+  --sl-color-gray-4: hsl(0, 0%, 35%);
+  --sl-color-gray-5: hsl(0, 0%, 22%);
+  --sl-color-gray-6: hsl(0, 0%, 15%);
+  --sl-color-black: hsl(0, 0%, 9%);
+
+  /* Accent collapses to grayscale: links/active items read as light gray. */
+  --sl-color-accent-low: hsl(0, 0%, 20%);
+  --sl-color-accent: hsl(0, 0%, 70%);
+  --sl-color-accent-high: hsl(0, 0%, 95%);
+}
+
+/* ---------- Palette: light theme ---------- */
+:root[data-theme="light"] {
+  --sl-color-white: hsl(0, 0%, 9%);
+  --sl-color-gray-1: hsl(0, 0%, 15%);
+  --sl-color-gray-2: hsl(0, 0%, 22%);
+  --sl-color-gray-3: hsl(0, 0%, 35%);
+  --sl-color-gray-4: hsl(0, 0%, 55%);
+  --sl-color-gray-5: hsl(0, 0%, 78%);
+  --sl-color-gray-6: hsl(0, 0%, 93%);
+  --sl-color-gray-7: hsl(0, 0%, 97%);
+  --sl-color-black: hsl(0, 0%, 100%);
+
+  --sl-color-accent-low: hsl(0, 0%, 86%);
+  --sl-color-accent: hsl(0, 0%, 36%);
+  --sl-color-accent-high: hsl(0, 0%, 13%);
+}
+
+/* Crisp monochrome brand title (drop the accent tint). */
+.site-title {
+  color: var(--sl-color-white);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Text selection ---------- */
+::selection {
+  background: var(--sl-color-white);
+  color: var(--sl-color-black);
+}
+
+/* ---------- Scrollbars (replace the native OS bar) ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-5) transparent;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sl-color-gray-5);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sl-color-gray-4);
+}
+
+/* ---------- Native <select> dropdowns (theme & language pickers) ---------- */
+/* Starlight already sets appearance:none and overlays its own caret icon; we
+ * give the control a flat, bordered monochrome look instead of the OS widget. */
+.sl-select-wrapper select,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--sl-color-black);
+  color: var(--sl-color-gray-1);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding-block: 0.4em;
+  padding-inline: 0.7em 2em;
+  font: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+.sl-select-wrapper select:hover,
+select:hover {
+  border-color: var(--sl-color-gray-3);
+  background-color: var(--sl-color-gray-6);
+}
+.sl-select-wrapper select:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--sl-color-white);
+  outline-offset: 1px;
+}
+/* The dropdown option list, where the browser honours custom colours. */
+select option {
+  background: var(--sl-color-black);
+  color: var(--sl-color-gray-1);
+}
+
+/* ---------- Focus rings (monochrome) ---------- */
+:focus-visible {
+  outline-color: var(--sl-color-white);
+}
+
+/* ---------- Card icons ---------- */
+/* Starlight tints each <Card> icon a different hue (yellow/purple/green/pink).
+ * Force a neutral chip so the cards stay monochrome. !important because the
+ * source rule lives in a scoped component layer. */
+.card .icon {
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  border: 1px solid var(--sl-color-gray-5);
+}
