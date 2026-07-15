@@ -1,0 +1,128 @@
+/*
+ * PDFBook docs — modern monochrome theme.
+ *
+ * Starlight's default palette is tinted blue (hue 224). Here we desaturate the
+ * whole ramp to a neutral grayscale (saturation 0%) for both themes, then
+ * restyle the native browser chrome — scrollbars, <select> dropdowns, text
+ * selection and focus rings — so nothing reintroduces colour or an OS look.
+ */
+
+/* ---------- Typography ---------- */
+/* Self-hosted Inter, matching the app and the pdfbook.app landing page. */
+:root {
+  --sl-font: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* Tight tracking on headings — the same display feel as pdfbook.app. */
+:is(h1, h2, h3, .site-title) {
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Palette: dark theme (default) ---------- */
+:root {
+  --sl-color-white: hsl(0, 0%, 100%);
+  --sl-color-gray-1: hsl(0, 0%, 93%);
+  --sl-color-gray-2: hsl(0, 0%, 76%);
+  --sl-color-gray-3: hsl(0, 0%, 55%);
+  --sl-color-gray-4: hsl(0, 0%, 35%);
+  --sl-color-gray-5: hsl(0, 0%, 22%);
+  --sl-color-gray-6: hsl(0, 0%, 15%);
+  --sl-color-black: hsl(0, 0%, 9%);
+
+  /* Accent collapses to grayscale: links/active items read as light gray. */
+  --sl-color-accent-low: hsl(0, 0%, 20%);
+  --sl-color-accent: hsl(0, 0%, 70%);
+  --sl-color-accent-high: hsl(0, 0%, 95%);
+}
+
+/* ---------- Palette: light theme ---------- */
+:root[data-theme="light"] {
+  --sl-color-white: hsl(0, 0%, 9%);
+  --sl-color-gray-1: hsl(0, 0%, 15%);
+  --sl-color-gray-2: hsl(0, 0%, 22%);
+  --sl-color-gray-3: hsl(0, 0%, 35%);
+  --sl-color-gray-4: hsl(0, 0%, 55%);
+  --sl-color-gray-5: hsl(0, 0%, 78%);
+  --sl-color-gray-6: hsl(0, 0%, 93%);
+  --sl-color-gray-7: hsl(0, 0%, 97%);
+  --sl-color-black: hsl(0, 0%, 100%);
+
+  --sl-color-accent-low: hsl(0, 0%, 86%);
+  --sl-color-accent: hsl(0, 0%, 36%);
+  --sl-color-accent-high: hsl(0, 0%, 13%);
+
+  /* Warm off-white page background like pdfbook.app (#FAFAFA) instead of pure
+   * white, so content surfaces read as gently layered. */
+  --sl-color-bg: hsl(0, 0%, 98%);
+}
+
+/* Crisp monochrome brand title (drop the accent tint). */
+.site-title {
+  color: var(--sl-color-white);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Text selection ---------- */
+::selection {
+  background: var(--sl-color-white);
+  color: var(--sl-color-black);
+}
+
+/* ---------- Scrollbars (replace the native OS bar) ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-5) transparent;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sl-color-gray-5);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sl-color-gray-4);
+}
+
+/* ---------- Dropdowns (theme & language pickers) ---------- */
+/* Starlight's <select> positions a leading icon absolutely and reserves left
+ * padding for it via calc(); we deliberately DON'T re-pad or re-box the control
+ * (an earlier override did and the icon overlapped the label). Its colours come
+ * straight from the monochrome palette above, so it stays Starlight's native,
+ * accessible control — just grayscale. The open option list is the browser's. */
+
+/* ---------- Focus rings (monochrome) ---------- */
+:focus-visible {
+  outline-color: var(--sl-color-white);
+}
+
+/* ---------- Card icons ---------- */
+/* Starlight tints each <Card> icon a different hue (yellow/purple/green/pink).
+ * Force a neutral chip so the cards stay monochrome. !important because the
+ * source rule lives in a scoped component layer. */
+.card .icon {
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* ---------- pdfbook.app accents (kept subtle, still wiki-first) ---------- */
+/* Softer rounding + a whisper of shadow on cards, echoing the landing page's
+ * rounded-2xl surfaces — without turning the docs into a marketing page. */
+.card {
+  border-radius: 0.875rem;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(0, 0, 0, 0.03);
+}
+/* Splash-page hero CTAs as pills, like the pdfbook.app buttons. */
+.sl-link-button {
+  border-radius: 999px;
+}
