@@ -8,7 +8,8 @@
 
 Read books, manga, papers, and scans in a page-flip or scroll view. Keep thousands of PDFs
 organized with tags, ratings, and reading status. Turn images or on-screen pages into new
-PDFs. No account, no upload. Your library never leaves your computer.
+PDFs. Reading requires no account, and PDFBook does not upload your library. If you choose
+a cloud AI provider, the text you ask about is sent to that provider for the request.
 
 [![Latest release](https://img.shields.io/github/v/release/YumeBytesLab/PDFBook?label=latest&color=2563eb)](https://github.com/YumeBytesLab/PDFBook/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/YumeBytesLab/PDFBook/total?color=2563eb)](https://github.com/YumeBytesLab/PDFBook/releases)
@@ -76,7 +77,8 @@ local answers, or OpenAI, Claude, and OpenRouter. Entirely optional.
 ### Private by design
 
 Reading requires no account. PDFBook works offline, and your files, notes, and reading
-history stay on your device.
+history stay on your device. Cloud AI is optional; when you use it, the text you ask about
+is sent to the provider you configured.
 
 ## Free plan and Pro
 
@@ -102,6 +104,9 @@ This repository holds two things:
    [Astro Starlight](https://starlight.astro.build) and deployed on Vercel.
 2. **Release downloads**, published under
    [Releases](https://github.com/YumeBytesLab/PDFBook/releases) for every platform.
+
+The PDFBook application itself is closed source; this repository is the public home for
+its documentation and release binaries.
 
 ### Working on the docs
 
