@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a workflow improvement for PDFBook.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+      description: Describe the reading or PDF workflow and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Explain how the change would help. Alternatives are welcome.

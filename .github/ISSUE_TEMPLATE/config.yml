@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and usage help
+    url: https://github.com/YumeBytesLab/PDFBook/discussions
+    about: Ask how to use PDFBook or discuss a workflow.
+  - name: Private support
+    url: https://pdfbook.app/contact
+    about: Contact support without sharing private files in a public issue.

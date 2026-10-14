@@ -27,5 +27,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build documentation
-        run: npm run build
+      - name: Build and validate documentation
+        run: npm run check:docs

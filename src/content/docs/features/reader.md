@@ -1,45 +1,24 @@
 ---
-title: Reader
-description: PDFBook's reader — page-flip and vertical-scroll modes, right-to-left manga support, in-document search, bookmarks, zoom, and reading-position memory.
+title: Read PDFs, books, and manga
+description: Use PDFBook's page-flip and vertical-scroll reader, right-to-left manga mode, search, bookmarks, and Floating Reader.
 ---
 
-PDFBook's reader is built for long reading sessions. It offers two viewing modes and
-remembers where you stopped in every book.
+## Choose how to read
 
-## Viewing modes
+Use **page flip** for single pages or two-page spreads, or **vertical scroll** for a continuous document. For manga, choose **right-to-left** reading; direction can be stored per book.
 
-- **Page flip** — a two-page spread that turns like a physical book, with an optional
-  page-turn animation. Ideal for books and manga.
-- **Vertical scroll** — a continuous column of pages. Ideal for papers and documents
-  you skim or scroll quickly.
+The reader offers text search, bookmarks with optional labels, zoom, and navigation through the PDF's own table of contents. Text search needs a searchable text layer; it does not add OCR to scanned pages.
 
-You can switch modes at any time from the reader toolbar.
+## Continue where you stopped
 
-## Reading direction
+With reading-position memory enabled, PDFBook saves your place as you read. Password-protected PDFs prompt for the password, with an option to remember it for that book.
 
-PDFBook supports both **left-to-right** and **right-to-left** reading. Set right-to-left
-for manga and other RTL books; the setting can be applied per book, so LTR and RTL titles
-live side by side in the same library.
+## Focus mode and Floating Reader
 
-## Search, bookmarks, and navigation
+Focus mode hides the surrounding interface. The **Floating Reader** opens an always-on-top reading window for use alongside other apps.
 
-- **In-document search** — find text anywhere in the PDF and jump between matches.
-- **Bookmarks** — save any page, with an optional label, and return to it later.
-- **Table of contents** — jump straight to a chapter when the document provides one.
-- **Zoom** — zoom in and out with the toolbar or <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + scroll.
+Its first free session is unmetered; subsequent free use includes **60 minutes of active reading per calendar month**. Pro and Lifetime are unmetered.
 
-## Reading-position memory
+## Notes and bookmarks
 
-When enabled, PDFBook remembers the page (and zoom) you were on and reopens the book
-right there next time. Your place is saved automatically as you read.
-
-## Password-protected PDFs
-
-Encrypted PDFs are supported — enter the password when prompted, and you can choose to
-have PDFBook remember it for that book.
-
-## Focus mode and the Floating Reader
-
-- **Focus mode** hides the surrounding interface so only the page is visible.
-- The **Floating Reader** pops the current document into a small always-on-top window,
-  handy for reading alongside other work.
+A note belongs to the whole book. It is not a PDF annotation: PDFBook does not provide highlighting, drawing, or comments placed on the page. Use bookmarks to return to a page and library notes for your thoughts.

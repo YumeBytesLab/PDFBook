@@ -6,7 +6,7 @@ PDFBook itself is closed source. This public repository contains the documentati
 
 Please do not post exploit details, sensitive logs, API keys, document contents, or other private data in a public issue.
 
-If GitHub offers **Private vulnerability reporting** for this repository, use the **Security** tab to send the report privately. If that option is unavailable, open a public issue asking for a private contact channel without including the vulnerability details.
+If GitHub offers **Private vulnerability reporting** for this repository, use the **Security** tab to send the report privately. Otherwise, [contact PDFBook support](https://pdfbook.app/contact) to arrange a private report.
 
 A useful report includes:
 

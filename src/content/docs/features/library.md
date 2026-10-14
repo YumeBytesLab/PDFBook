@@ -1,35 +1,20 @@
 ---
-title: Library
-description: Organize your PDF collection in PDFBook with watched folders, tags, ratings, favorites, reading status, notes, and search.
+title: Organize your PDF library
+description: Manage local PDFs in PDFBook with folders, tags, favorites, ratings, reading status, notes, and cover thumbnails.
 ---
 
-The library is where your whole collection lives. PDFBook keeps it in sync with folders
-on your computer and gives you several ways to organize and find books.
+## Add files and folders
 
-## Watched folders
+Add a local PDF or a folder of PDFs to your library. A watched folder is a location you can scan again to update the catalog. Use the library refresh control after adding files; watched folders are not continuously monitored in the background.
 
-A **watched folder** is a directory PDFBook scans for PDFs. Add one and every PDF inside
-becomes a book in your library. Re-scan at any time to pick up files you've added, and
-removed books stay removed even after a rescan.
+Books removed from the library stay excluded from later folder scans. Removing a catalog entry and deleting the PDF file are different actions; check the action offered in the app before confirming it.
 
-## Organizing books
+## Find your next read
 
-Each book can carry:
+Browse covers in a grid or list. Organize books with folders, tags, author information, a 0–5 star rating, favorites, and Unread / Reading / Completed status.
 
-- **Tags** — group books however you like (e.g. *work*, *manga*, *to-read*).
-- **Rating** — a 0–5 star rating.
-- **Favorite** — mark the books you reach for most.
-- **Reading status** — *Unread*, *Reading*, or *Completed*.
-- **Notes & description** — a free-text note plus a separate description per book.
+Use search and filters to narrow the collection. Each book can have a note and a separate description; notes are attached to the book, not written on PDF pages.
 
-## Finding books
+## Free library limit
 
-- **Search** by title across your library.
-- **Filter** by tag, author, rating, status, and more.
-- **Sort** by date added, title, and other fields.
-- Switch between **grid** and **list** views.
-
-## Covers
-
-PDFBook generates a cover thumbnail for each book from its first page, so the library is
-easy to scan visually. Covers are generated even for encrypted books once you unlock them.
+The free plan supports **50 books**. Pro and Lifetime remove the library cap. Your catalog and thumbnails stay on your device; keep backups of your original PDF files as well.

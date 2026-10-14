@@ -1,46 +1,27 @@
 ---
-title: Getting started
-description: Install PDFBook, add your first folder of PDFs, and open a book — a two-minute setup guide for Windows, macOS, and Linux.
+title: Get started with PDFBook
+description: Install PDFBook, add your first local PDF or folder, and start reading. A setup guide for Windows, macOS, and Linux.
 ---
-
-This guide takes you from a fresh install to reading your first book.
 
 ## 1. Install PDFBook
 
-Head to the [Download](/download/) page and grab the build for your operating system:
+[Download the build for your OS and CPU](/download/), then open the app and complete its introductory setup.
 
-- **Windows** — run the `setup` installer, or use the `portable` build if you'd rather
-  not install anything.
-- **macOS** — open the `.dmg` and drag PDFBook to your Applications folder.
-- **Linux** — use the `.AppImage` (make it executable and run it) or install the `.deb`.
+## 2. Add a PDF or a folder
 
-When you launch PDFBook for the first time, a short setup wizard lets you choose your
-language, appearance, and reading direction.
+Open **Library** and add a local PDF or a folder of PDFs. Watched folders can be scanned again to pick up files added later. Use the library's refresh control to update the catalog; it is not a continuous background file watcher.
 
-## 2. Add your PDFs
+The free library supports up to **50 books**. Files stay in their local folders; the library stores their catalog information.
 
-PDFBook reads from **watched folders** — directories on your computer that it scans for
-PDFs and keeps in sync.
+## 3. Start reading
 
-1. Open the **Library**.
-2. Add a folder that contains PDFs.
-3. PDFBook scans it and fills your library with every book it finds.
+Open a book and choose page-flip or vertical-scroll mode. Use right-to-left reading for manga, search document text, or add a bookmark. Reading-position memory lets you continue later when that setting is enabled.
 
-Add as many folders as you like. When you drop new files into a watched folder, they
-show up in your library on the next scan.
+![PDFBook reader with a two-page spread](/images/reader-en.webp)
 
-## 3. Open a book
+## Explore next
 
-Click any book to open it in the reader. From there you can:
-
-- Switch between **page-flip** and **vertical-scroll** modes.
-- Search the text inside the document.
-- Add bookmarks and let PDFBook remember your reading position.
-
-See the [Reader guide](/features/reader/) for everything the reader can do.
-
-## Next steps
-
-- [Organize your library](/features/library/) with tags, ratings, and reading status.
-- [Create PDFs](/features/creating-pdfs/) from images or screen captures.
-- Have a question? Check the [FAQ](/faq/).
+- [Reader and manga settings](/features/reader/)
+- [Folders, tags, and reading status](/features/library/)
+- [Create PDFs and extract images](/features/creating-pdfs/)
+- [Plans, privacy, and troubleshooting](/faq/)

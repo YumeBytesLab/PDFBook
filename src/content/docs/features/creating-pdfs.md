@@ -1,31 +1,20 @@
 ---
-title: Creating PDFs
-description: Build PDFs in PDFBook from images and pages, convert other document formats, and assemble new documents — all locally on your computer.
+title: Create PDFs, convert files, and extract images
+description: Build PDFs from JPG and PNG images, convert supported documents and e-books, and extract embedded PDF images with PDFBook's local tools.
 ---
 
-PDFBook can create new PDFs, not just read them. Everything happens on your computer.
+## Create a PDF from images
 
-## Build a PDF from images or pages
+Open **Creator**, add JPG or PNG images, arrange their order, and export a PDF. This works well for a folder of scans or screenshots. The current Creator does not accept WebP images or import arbitrary PDF pages into a new document.
 
-Use the **Creator** to assemble a PDF from images or existing pages:
+## Convert documents and e-books
 
-- Add images (JPG, PNG, WebP) or pages and arrange them in the order you want.
-- Reorder pages by dragging.
-- Export the result as a single PDF.
+Open **Converter**, choose supported files and an output folder, and convert them to PDF. Supported source extensions include EPUB / MOBI / AZW3, DOCX, Markdown, text, HTML, and CBZ / CBR. Conversion is local; results depend on the source file's structure and protection.
 
-This is handy for turning a folder of scans or screenshots into one clean document.
+## Extract embedded images
 
-## Convert other formats
+Open **Extractor** and choose a PDF. Preview its embedded images, select the ones you need, and save them as PNG files. This extracts image objects; it is not a PDF page-splitting tool or a full-page rendering export.
 
-PDFBook can turn several other formats into PDF, so they join the rest of your library —
-including common document and e-book formats. Open the file and export it as a PDF.
+## Capture pages from another app
 
-## Capture pages from the screen
-
-The [Screen capture](/features/screen-capture/) tool builds a PDF from pages shown in
-another application — useful for sources you can only view in a separate viewer or reader.
-
-## Extract pages
-
-Need part of a document? PDFBook can pull selected pages out into a new PDF, leaving the
-original untouched.
+The [screen-capture tool](/features/screen-capture/) can collect visible pages into a PDF on supported systems. Availability differs by OS and Linux display session.

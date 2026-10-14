@@ -2,15 +2,24 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
-// `site` is what makes Starlight emit correct canonical URLs and a sitemap.xml
-// (both are SEO essentials). It must match the public custom domain exactly.
+// Keep canonical URLs and the generated sitemap on the documentation domain.
 export default defineConfig({
   site: "https://wiki.pdfbook.app",
+  trailingSlash: "always",
   integrations: [
     starlight({
       title: "PDFBook",
       description:
-        "Read, create, extract, and organize your PDF library — a fast, private desktop app for Windows, macOS, and Linux.",
+        "PDFBook documentation: read books and manga, organize local PDFs, create and convert documents, and install the desktop app on Windows, macOS, or Linux.",
+      head: [
+        { tag: "meta", attrs: { name: "robots", content: "index,follow,max-image-preview:large" } },
+        { tag: "meta", attrs: { property: "og:image", content: "https://wiki.pdfbook.app/images/library-en.webp" } },
+        { tag: "meta", attrs: { property: "og:image:width", content: "1920" } },
+        { tag: "meta", attrs: { property: "og:image:height", content: "1200" } },
+        { tag: "meta", attrs: { property: "og:image:alt", content: "PDFBook desktop library with demonstration books" } },
+        { tag: "meta", attrs: { name: "twitter:image", content: "https://wiki.pdfbook.app/images/library-en.webp" } },
+        { tag: "meta", attrs: { name: "twitter:image:alt", content: "PDFBook desktop library with demonstration books" } },
+      ],
       // Self-hosted Inter (matches the app + pdfbook.app), then the monochrome
       // theme + native-element overrides. Font CSS must load before custom.css.
       customCss: ["@fontsource-variable/inter/index.css", "./src/styles/custom.css"],

@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem in PDFBook or its documentation.
+title: "[Bug]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: PDFBook version
+      placeholder: e.g. 1.1.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and CPU
+      placeholder: e.g. Windows 11, x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include what you expected and what happened. Remove personal information from screenshots and logs.
+    validations:
+      required: true
