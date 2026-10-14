@@ -1,57 +1,100 @@
-# PDFBook — PDF reader and library manager
+<p align="center">
+  <a href="https://pdfbook.app"><img src="public/images/app-icon.png" width="88" height="88" alt="PDFBook"></a>
+</p>
 
-Read books, manga, papers, and scanned documents in one desktop app for **Windows, macOS, and Linux**. Keep your PDF collection organized and return to the page where you stopped.
+<h1 align="center">PDFBook</h1>
 
-**[Download PDFBook](https://github.com/YumeBytesLab/PDFBook/releases/latest)** · [Website](https://pdfbook.app) · [Documentation](https://wiki.pdfbook.app) · [日本語](README.ja.md)
+<p align="center">
+  <strong>Your PDFs. Your own bookshelf.</strong><br>
+  A PDF reader and library manager for Windows, macOS, and Linux.
+</p>
+
+<p align="center">
+  <a href="https://github.com/YumeBytesLab/PDFBook/releases/latest"><img src="https://img.shields.io/github/v/release/YumeBytesLab/PDFBook?style=flat-square&amp;label=release&amp;color=2563eb" alt="GitHub release"></a>
+  <a href="https://github.com/YumeBytesLab/PDFBook/actions/workflows/docs.yml"><img src="https://github.com/YumeBytesLab/PDFBook/actions/workflows/docs.yml/badge.svg" alt="Documentation build"></a>
+</p>
+
+<p align="center">
+  <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Download PDFBook</a></strong> &nbsp; · &nbsp;
+  <a href="https://pdfbook.app">Website</a> &nbsp; · &nbsp;
+  <a href="https://wiki.pdfbook.app/">Reading guides</a>
+</p>
+
+<p align="center">
+<strong><a href="README.md">English</a></strong> &nbsp; / &nbsp; <a href="README.ja.md">日本語</a> &nbsp; / &nbsp; <a href="readme/README.zh-CN.md">简体中文</a> &nbsp; / &nbsp; <a href="readme/README.ko.md">한국어</a> &nbsp; / &nbsp; <a href="readme/README.es.md">Español</a> &nbsp; / &nbsp; <a href="readme/README.fr.md">Français</a><br>
+<a href="readme/README.de.md">Deutsch</a> &nbsp; / &nbsp; <a href="readme/README.pt-BR.md">Português (Brasil)</a> &nbsp; / &nbsp; <a href="readme/README.ru.md">Русский</a> &nbsp; / &nbsp; <a href="readme/README.it.md">Italiano</a> &nbsp; / &nbsp; <a href="readme/README.id.md">Bahasa Indonesia</a> &nbsp; / &nbsp; <a href="readme/README.vi.md">Tiếng Việt</a>
+</p>
+
+---
 
 ![PDFBook library with book covers, folders, favorites, and reading status](public/images/library-en.webp)
 
-## Read your way
+<p align="center"><sub>Real PDFBook interface · 12 interface languages · Free to start</sub></p>
 
-- **Books and manga:** page-flip and vertical-scroll modes, single pages or spreads, and right-to-left reading.
-- **Papers and reference material:** document text search, bookmarks, a table of contents when supplied by the PDF, and an always-on-top Floating Reader.
-- **Your PDF library:** folders, tags, ratings, favorites, reading status, and notes attached to each book. Re-scan watched folders to find new files.
-- **PDF tools:** make PDFs from JPG/PNG images, convert supported document and e-book formats, and extract embedded images from a PDF.
-- **Optional AI:** connect your own provider or a local Ollama model. No AI subscription is included with PDFBook.
+## Find a book. Settle into the next chapter.
 
-![PDFBook desktop reader displaying a two-page book spread](public/images/reader-en.webp)
+Turn folders of PDFs into a visual library, then read books, manga, papers, and scanned documents in a layout that suits you. Return to your saved position when reading-position memory is enabled.
 
-## Download and install
-
-Choose the build for your operating system and CPU from the [latest release](https://github.com/YumeBytesLab/PDFBook/releases/latest).
-
-| Platform | Downloads |
+| For your next… | Make it yours |
 | --- | --- |
-| Windows 10 / 11 | Setup or Portable, **x64** and **ARM64** |
-| macOS | DMG for **Apple Silicon (ARM64)** and **Intel (x64)** |
-| Linux | AppImage or deb, **x64 / amd64** and **ARM64** |
+| **Book or manga** | Page-flip or vertical scroll, single pages or two-page spreads, and right-to-left reading. |
+| **Paper or reference** | Text search, bookmarks, the PDF's own table of contents, and an always-on-top Floating Reader. |
+| **Growing collection** | Covers, folders, tags, ratings, favorites, reading status, and notes for each book. Re-scan watched folders to import new files. |
+| **PDF task** | Create PDFs from JPG/PNG images, convert supported documents and e-books, and extract embedded images. |
+| **Question while reading** | Optional AI with your own provider or a local Ollama model. |
 
-See the [installation guide](https://wiki.pdfbook.app/download/) for file names and first-launch help. Windows standalone builds are unsigned; macOS builds are not Developer ID signed or notarized.
+![PDFBook reader showing a two-page book spread with reading controls](public/images/reader-en.webp)
 
-Microsoft Store distribution is being prepared. The `.appx` release attachments are unsigned submission packages, not regular installers. Use Setup or Portable until Store installation is available.
+## Choose your download
 
-## Free to start
+Open the **[latest release](https://github.com/YumeBytesLab/PDFBook/releases/latest)** and choose your OS and CPU.
 
-The free plan supports a library of **up to 50 books**. The Floating Reader has an unmetered first session, followed by **60 minutes of active reading per calendar month**. Pro and Lifetime remove those library and Floating Reader limits.
+| Platform | Format | CPU |
+| --- | --- | --- |
+| **Windows 10 / 11** | Setup · Portable | x64 · ARM64 |
+| **macOS** | DMG | Apple Silicon (ARM64) · Intel (x64) |
+| **Linux** | AppImage · deb | x64 / amd64 · ARM64 |
 
-AI chat uses your own provider; page-reading and app-action tools require a paid plan. Provider fees are separate. See [plans and pricing](https://pdfbook.app/#pricing) for current purchase options.
+[Installation guide](https://wiki.pdfbook.app/download/) · [Add your first books](https://wiki.pdfbook.app/getting-started/)
 
-## Your files and privacy
+<details>
+<summary>First launch and Microsoft Store availability</summary>
 
-PDF reading, library storage, PDF creation, and conversion run on your computer. Reading requires no account. If you enable cloud AI, your messages, chat context, and requested document text or page images are sent to the provider you configured. A local Ollama model keeps those AI requests on your machine.
+Windows standalone builds are unsigned; macOS builds are not Developer ID signed or notarized. The installation guide explains first-launch checks.
 
-[Privacy policy](https://pdfbook.app/privacy) · [AI guide](https://wiki.pdfbook.app/features/ai-assistant/)
+Microsoft Store distribution is being prepared. Release attachments ending in `.appx` are unsigned submission packages. For Windows installation, choose **Setup** or **Portable**.
 
-## Guides and support
+</details>
 
-- [Get started](https://wiki.pdfbook.app/getting-started/) · [Read books and manga](https://wiki.pdfbook.app/features/reader/) · [Organize a PDF library](https://wiki.pdfbook.app/features/library/)
-- [FAQ](https://wiki.pdfbook.app/faq/) · [Report a bug](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Ask a question](https://github.com/YumeBytesLab/PDFBook/discussions)
-- [Contact support](https://pdfbook.app/contact) · [Report a security vulnerability](SECURITY.md)
+## Start free, grow your library
 
-When reporting a bug, include your PDFBook version, OS, CPU architecture, and reproduction steps. Remove private documents and personal data from attachments.
+| Feature | Free | Pro / Lifetime |
+| --- | --- | --- |
+| **Library** | Up to **50 books** | No book-count limit |
+| **Floating Reader** | Unmetered first session, then **60 minutes of active reading per calendar month** | No time limit |
+| **AI chat with your provider** | Available | Available |
+| **AI page-reading and app-action tools** | — | Included |
 
-## About this repository
+AI provider fees are separate; PDFBook does not include an AI subscription. [Compare plans and current pricing](https://pdfbook.app/#pricing).
 
-This is the official home for **PDFBook release downloads and documentation**, maintained by [YumeBytes](https://pdfbook.app). The desktop application is closed source; this repository contains the documentation site, not the application's source code.
+## Your books stay close. AI is your choice.
 
-To work on the Astro Starlight documentation, see the [contributing guide](.github/CONTRIBUTING.md).
+PDF reading, library storage, PDF creation, and conversion run on your computer. **No account is needed to read.** If you enable cloud AI, messages, chat context, and requested document text or page images are sent to the provider you configured. A local Ollama model keeps those AI requests on your machine.
+
+[Privacy policy](https://pdfbook.app/privacy) · [How AI works](https://wiki.pdfbook.app/features/ai-assistant/)
+
+## A little help for your next read
+
+[Reader and manga guide](https://wiki.pdfbook.app/features/reader/) · [Library guide](https://wiki.pdfbook.app/features/library/) · [FAQ](https://wiki.pdfbook.app/faq/)
+
+[Report a bug](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Ask a question](https://github.com/YumeBytesLab/PDFBook/discussions) · [Contact support](https://pdfbook.app/contact) · [Security](SECURITY.md)
+
+For bug reports, include the app version, OS, CPU, and steps to reproduce. Remove private documents and personal data from attachments.
+
+---
+
+### About this repository
+
+Maintained by [YumeBytes](https://pdfbook.app), this is the official home for **PDFBook downloads and documentation**. The desktop app is **closed source**; this repository contains the documentation site. See the [contributing guide](.github/CONTRIBUTING.md) to help with the docs.
+
+The app interface and these introductions support 12 languages. Detailed documentation is available in **English and Japanese**. Screenshots show PDFBook 1.1.0; 1.1.1 updates packaging without changing these screens. [Image sources](public/images/README.md).

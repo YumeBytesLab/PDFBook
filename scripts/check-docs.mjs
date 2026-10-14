@@ -61,9 +61,29 @@ for (const path of pages) {
 const sitemapUrls = [...read(join(root, "sitemap-0.xml")).matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 assert.deepEqual(new Set(sitemapUrls), urls, "Sitemap must contain exactly the canonical documentation pages");
 assert(read(join(root, "robots.txt")).includes(`${origin}/sitemap-index.xml`));
-for (const path of ["README.md", "README.ja.md"]) {
-  for (const match of read(path).matchAll(/!?\[[^\]\n]*\]\(([^\s)]+)\)/g)) {
-    if (!/^(?:https?:|#)/.test(match[1])) assert(existsSync(match[1]), `Broken README link: ${match[1]}`);
+const readmes = [
+  "README.md", "README.ja.md", "readme/README.zh-CN.md", "readme/README.ko.md",
+  "readme/README.es.md", "readme/README.fr.md", "readme/README.de.md", "readme/README.pt-BR.md",
+  "readme/README.ru.md", "readme/README.it.md", "readme/README.id.md", "readme/README.vi.md",
+];
+for (const path of readmes) {
+  const markdown = read(path);
+  const htmlTags = [...markdown.matchAll(/<(?:a|img)\b[^>]*>/g)];
+  const targets = [
+    ...[...markdown.matchAll(/!?\[[^\]\n]*\]\(([^\s)]+)\)/g)].map((match) => match[1]),
+    ...htmlTags.map((match) => {
+      const attrs = attributes(match[0]);
+      if (match[0].startsWith("<img")) assert(attrs.alt?.trim(), `README image needs alt text: ${path}`);
+      return attrs.href ?? attrs.src;
+    }),
+  ].filter(Boolean);
+  const localTargets = targets.filter((target) => !/^(?:https?:|#)/.test(target))
+    .map((target) => resolve(dirname(path), decodeURIComponent(target.split(/[?#]/)[0])));
+  for (const target of localTargets) assert(existsSync(target), `Broken README link: ${path} -> ${target}`);
+  for (const translation of readmes) {
+    assert(localTargets.includes(resolve(translation)), `Missing language link: ${path} -> ${translation}`);
   }
+  assert.equal((markdown.match(/<h1\b/g) ?? []).length, 1, `Expected one README H1: ${path}`);
+  assert(!/@(?:ASSETS|ROOT|READER_ALT|RELEASE)@/.test(markdown), `Unresolved README placeholder: ${path}`);
 }
-console.log(`Documentation checks passed: ${pages.length} pages, ${links} local references, unique metadata, language links and canonical sitemap.`);
+console.log(`Documentation checks passed: ${pages.length} pages, ${links} local references, unique metadata, canonical sitemap and ${readmes.length} READMEs with complete language links.`);

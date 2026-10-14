@@ -14,12 +14,14 @@ npm run build
 
 English pages are in `src/content/docs/`; Japanese translations are in `src/content/docs/ja/`. Keep equivalent pages linked and update both languages when a product fact changes.
 
+The product introductions are available in 12 languages: `README.md` (English), `README.ja.md` (Japanese), and ten translations under `readme/`. Update their feature, installation, plan, and privacy facts together. Every introduction must link to all 12 languages. The app interface supports these languages; detailed documentation currently remains English and Japanese.
+
 ## Content standards
 
 - Verify features and plan limits against the shipping application. Do not promise unimplemented tools, unmeasured performance, or unreleased Store availability.
 - Use real application screenshots with descriptive alt text. Keep their version and origin in `public/images/README.md`.
 - Keep product links on `pdfbook.app`, documentation links on `wiki.pdfbook.app`, and installers under this repository's Releases.
-- Run the production build and check links, titles, descriptions, canonical URLs, and installation instructions before publishing.
+- Run `npm run check:docs` to build and validate documentation metadata, local links, images, the sitemap, and all 12 README language links before publishing.
 - Keep credentials, private documents, submission packages, and local reports out of commits.
 
 ## Commits and pull requests
