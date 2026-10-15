@@ -79,6 +79,6 @@ Indica la versión, el sistema, la CPU y los pasos para reproducir el error. No 
 
 ### Acerca del repositorio
 
-Este es el repositorio oficial de **descargas y documentación de PDFBook**, mantenido por [YumeBytes](https://pdfbook.app). La aplicación es de **código cerrado**; aquí se aloja el sitio de documentación. La interfaz y estas presentaciones están en 12 idiomas; la documentación detallada está en inglés y japonés.
+Este es el repositorio oficial de **descargas y documentación de PDFBook**, mantenido por [YumeBytes](https://pdfbook.app). La aplicación es de **código cerrado**; aquí se aloja el sitio de documentación. La interfaz y estas presentaciones están en 12 idiomas.
 
 Las capturas muestran la interfaz en inglés de PDFBook 1.1.0; la versión 1.1.1 actualiza el empaquetado sin cambiar estas pantallas. [Origen de las imágenes](../public/images/README.md) · [Contribuir a la documentación (en inglés)](../.github/CONTRIBUTING.md).

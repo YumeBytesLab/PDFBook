@@ -79,6 +79,6 @@ Informe a versão, o sistema, a CPU e as etapas para reproduzir o problema. Remo
 
 ### Sobre este repositório
 
-Mantido pela [YumeBytes](https://pdfbook.app), este é o repositório oficial de **downloads e documentação do PDFBook**. O aplicativo é de **código fechado**; aqui está o site de documentação. A interface e estas apresentações estão em 12 idiomas; os guias detalhados estão em inglês e japonês.
+Mantido pela [YumeBytes](https://pdfbook.app), este é o repositório oficial de **downloads e documentação do PDFBook**. O aplicativo é de **código fechado**; aqui está o site de documentação. A interface e estas apresentações estão em 12 idiomas.
 
 As capturas mostram a interface em inglês do PDFBook 1.1.0. A versão 1.1.1 atualiza o empacotamento sem alterar essas telas. [Fontes das imagens](../public/images/README.md) · [Contribuir com a documentação (em inglês)](../.github/CONTRIBUTING.md).

@@ -79,6 +79,6 @@ Nenne App-Version, Betriebssystem, CPU und Schritte zur Reproduktion. Entferne p
 
 ### Über dieses Repository
 
-Das offizielle Repository für **PDFBook-Downloads und Dokumentation** wird von [YumeBytes](https://pdfbook.app) gepflegt. Die Desktop-App ist **Closed Source**; dieses Repository enthält die Dokumentationswebsite. Oberfläche und Produkteinführungen gibt es in 12 Sprachen, ausführliche Anleitungen auf Englisch und Japanisch.
+Das offizielle Repository für **PDFBook-Downloads und Dokumentation** wird von [YumeBytes](https://pdfbook.app) gepflegt. Die Desktop-App ist **Closed Source**; dieses Repository enthält die Dokumentationswebsite. Oberfläche und Produkteinführungen gibt es in 12 Sprachen.
 
 Die Screenshots zeigen PDFBook 1.1.0 auf Englisch. Version 1.1.1 aktualisiert die Paketierung, ohne diese Ansichten zu ändern. [Bildquellen](../public/images/README.md) · [Zur Dokumentation beitragen (Englisch)](../.github/CONTRIBUTING.md).

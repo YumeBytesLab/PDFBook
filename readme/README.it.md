@@ -79,6 +79,6 @@ Indica versione, sistema, CPU e passaggi per riprodurre il problema. Rimuovi doc
 
 ### Informazioni sul repository
 
-Questo repository ufficiale per **download e documentazione di PDFBook** è gestito da [YumeBytes](https://pdfbook.app). L’app è a **codice sorgente chiuso**; qui si trova il sito della documentazione. L’interfaccia e queste presentazioni sono disponibili in 12 lingue, le guide dettagliate in inglese e giapponese.
+Questo repository ufficiale per **download e documentazione di PDFBook** è gestito da [YumeBytes](https://pdfbook.app). L’app è a **codice sorgente chiuso**; qui si trova il sito della documentazione. L’interfaccia e queste presentazioni sono disponibili in 12 lingue.
 
 Le schermate mostrano l’interfaccia inglese di PDFBook 1.1.0. La versione 1.1.1 aggiorna il confezionamento senza modificare queste schermate. [Fonti delle immagini](../public/images/README.md) · [Contribuire alla documentazione (in inglese)](../.github/CONTRIBUTING.md).

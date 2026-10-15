@@ -14,7 +14,7 @@ npm run build
 
 English pages are in `src/content/docs/`; Japanese translations are in `src/content/docs/ja/`. Keep equivalent pages linked and update both languages when a product fact changes.
 
-The product introductions are available in 12 languages: `README.md` (English), `README.ja.md` (Japanese), and ten translations under `readme/`. Update their feature, installation, plan, and privacy facts together. Every introduction must link to all 12 languages. The app interface supports these languages; detailed documentation currently remains English and Japanese.
+The product introductions are available in 12 languages: `README.md` (English), `README.ja.md` (Japanese), and ten translations under `readme/`. Update their feature, installation, plan, and privacy facts together. Every introduction must link to all 12 languages. The separate Wiki site built from `src/content/docs/` currently has English and Japanese locales; do not describe that narrower scope as the language coverage of all product guidance.
 
 ## Content standards
 

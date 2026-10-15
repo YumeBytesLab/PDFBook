@@ -97,4 +97,4 @@ For bug reports, include the app version, OS, CPU, and steps to reproduce. Remov
 
 Maintained by [YumeBytes](https://pdfbook.app), this is the official home for **PDFBook downloads and documentation**. The desktop app is **closed source**; this repository contains the documentation site. See the [contributing guide](.github/CONTRIBUTING.md) to help with the docs.
 
-The app interface and these introductions support 12 languages. Detailed documentation is available in **English and Japanese**. Screenshots show PDFBook 1.1.0; 1.1.1 updates packaging without changing these screens. [Image sources](public/images/README.md).
+The app interface and these introductions support 12 languages. Screenshots show PDFBook 1.1.0; 1.1.1 updates packaging without changing these screens. [Image sources](public/images/README.md).

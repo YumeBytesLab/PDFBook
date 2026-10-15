@@ -79,6 +79,6 @@ Hãy ghi phiên bản ứng dụng, hệ điều hành, CPU và các bước tá
 
 ### Về kho lưu trữ này
 
-Đây là kho chính thức dành cho **bản tải xuống và tài liệu PDFBook**, do [YumeBytes](https://pdfbook.app) duy trì. Ứng dụng máy tính là **mã nguồn đóng**; kho này chứa trang tài liệu. Giao diện và phần giới thiệu có 12 ngôn ngữ; hướng dẫn chi tiết có tiếng Anh và tiếng Nhật.
+Đây là kho chính thức dành cho **bản tải xuống và tài liệu PDFBook**, do [YumeBytes](https://pdfbook.app) duy trì. Ứng dụng máy tính là **mã nguồn đóng**; kho này chứa trang tài liệu. Giao diện và phần giới thiệu có 12 ngôn ngữ.
 
 Ảnh chụp hiển thị giao diện tiếng Anh của PDFBook 1.1.0. Bản 1.1.1 cập nhật đóng gói mà không đổi các màn hình này. [Nguồn ảnh](../public/images/README.md) · [Đóng góp tài liệu (tiếng Anh)](../.github/CONTRIBUTING.md).

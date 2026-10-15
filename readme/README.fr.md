@@ -79,6 +79,6 @@ Indiquez la version, le système, le processeur et les étapes de reproduction. 
 
 ### À propos de ce dépôt
 
-Ce dépôt officiel de **téléchargements et de documentation PDFBook** est maintenu par [YumeBytes](https://pdfbook.app). L’application est à **code source fermé** ; ce dépôt contient le site de documentation. L’interface et ces présentations sont disponibles en 12 langues ; les guides détaillés sont en anglais et en japonais.
+Ce dépôt officiel de **téléchargements et de documentation PDFBook** est maintenu par [YumeBytes](https://pdfbook.app). L’application est à **code source fermé** ; ce dépôt contient le site de documentation. L’interface et ces présentations sont disponibles en 12 langues.
 
 Captures de l’interface anglaise de PDFBook 1.1.0 ; la version 1.1.1 modifie l’empaquetage sans changer ces écrans. [Sources des images](../public/images/README.md) · [Contribuer à la documentation (en anglais)](../.github/CONTRIBUTING.md).

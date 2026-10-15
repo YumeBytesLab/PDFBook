@@ -79,6 +79,6 @@ Sertakan versi aplikasi, OS, CPU, dan langkah reproduksi. Hapus dokumen pribadi 
 
 ### Tentang repositori ini
 
-Repositori resmi **unduhan dan dokumentasi PDFBook** ini dikelola oleh [YumeBytes](https://pdfbook.app). Aplikasi desktop bersifat **sumber tertutup**; repositori ini berisi situs dokumentasi. Antarmuka dan pengenalan produk tersedia dalam 12 bahasa; panduan lengkap tersedia dalam bahasa Inggris dan Jepang.
+Repositori resmi **unduhan dan dokumentasi PDFBook** ini dikelola oleh [YumeBytes](https://pdfbook.app). Aplikasi desktop bersifat **sumber tertutup**; repositori ini berisi situs dokumentasi. Antarmuka dan pengenalan produk tersedia dalam 12 bahasa.
 
 Tangkapan layar menampilkan PDFBook 1.1.0 dengan antarmuka Inggris. Versi 1.1.1 memperbarui pengemasan tanpa mengubah layar ini. [Sumber gambar](../public/images/README.md) · [Kontribusi dokumentasi (bahasa Inggris)](../.github/CONTRIBUTING.md).
