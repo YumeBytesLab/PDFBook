@@ -22,7 +22,7 @@ description: "选择 Windows、macOS、Linux 的 x64 或 ARM64 版本，了解�
 
 常规安装请选择 Setup；无需安装直接运行请选择 Portable。独立发行版尚未签名，Windows 可能显示发布者或信誉提示。请先确认文件来自官方仓库，再决定是否运行。
 
-Microsoft Store 版正在准备中。`.appx` 是未签名的提交包，普通安装请使用 Setup 或 Portable。
+Microsoft Store 版正在准备中。Windows 用户请使用 **Setup** 或 **Portable**。
 
 ## macOS 与 Linux
 

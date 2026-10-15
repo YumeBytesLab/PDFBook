@@ -22,7 +22,7 @@ description: "Wähle die passende Windows-, macOS- oder Linux-Ausgabe für x64 o
 
 Setup installiert die App; Portable startet ohne Installation. Die eigenständigen Ausgaben sind unsigniert, deshalb kann Windows einen Herausgeber- oder Reputationshinweis zeigen. Prüfe die offizielle Herkunft, bevor du sie ausführst.
 
-Die Store-Veröffentlichung wird vorbereitet. `.appx`-Dateien sind unsignierte Einreichungspakete. Verwende Setup oder Portable.
+Die Microsoft-Store-Veröffentlichung wird vorbereitet. Verwende unter Windows **Setup** oder **Portable**.
 
 ## macOS und Linux
 

@@ -55,7 +55,7 @@ Chọn tệp phù hợp với hệ điều hành và CPU trong **[bản phát h�
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Các bản Windows độc lập chưa được ký; các bản macOS chưa có chữ ký Developer ID hoặc công chứng Apple. Xem [hướng dẫn cài đặt](https://wiki.pdfbook.app/vi/download/). Bản Microsoft Store đang được chuẩn bị. Tệp `.appx` là gói gửi duyệt chưa ký; trên Windows hãy dùng **Setup hoặc Portable**.
+Các bản Windows độc lập chưa được ký; các bản macOS chưa có chữ ký Developer ID hoặc công chứng Apple. Xem [hướng dẫn cài đặt](https://wiki.pdfbook.app/vi/download/). Bản Microsoft Store đang được chuẩn bị. Trên Windows hãy dùng **Setup hoặc Portable**.
 
 ## Bắt đầu miễn phí
 

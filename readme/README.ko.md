@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Windows 독립 배포판은 서명되지 않았으며, macOS 버전은 Developer ID 서명·공증이 적용되지 않았습니다. [설치 가이드](https://wiki.pdfbook.app/ko/download/)를 확인하세요. Microsoft Store 버전은 준비 중입니다. `.appx`는 서명되지 않은 제출용 패키지이므로 Windows에서는 **Setup 또는 Portable**을 사용하세요.
+Windows 독립 배포판은 서명되지 않았으며, macOS 버전은 Developer ID 서명·공증이 적용되지 않았습니다. [설치 가이드](https://wiki.pdfbook.app/ko/download/)를 확인하세요. Microsoft Store 버전은 준비 중입니다. Windows에서는 **Setup 또는 Portable**을 사용하세요.
 
 ## 무료로 책장을 시작하세요
 

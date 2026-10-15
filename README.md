@@ -62,7 +62,7 @@ Open the **[latest release](https://github.com/YumeBytesLab/PDFBook/releases/lat
 
 Windows standalone builds are unsigned; macOS builds are not Developer ID signed or notarized. The installation guide explains first-launch checks.
 
-Microsoft Store distribution is being prepared. Release attachments ending in `.appx` are unsigned submission packages. For Windows installation, choose **Setup** or **Portable**.
+Microsoft Store distribution is being prepared. For Windows installation, choose **Setup** or **Portable**.
 
 </details>
 

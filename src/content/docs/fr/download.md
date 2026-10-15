@@ -22,7 +22,7 @@ Ouvrez la **[dernière version officielle](https://github.com/YumeBytesLab/PDFBo
 
 Setup effectue une installation classique ; Portable fonctionne sans installation. Les versions autonomes ne sont pas signées et Windows peut afficher un avertissement d’éditeur ou de réputation. Vérifiez leur origine officielle avant de les exécuter.
 
-La distribution Microsoft Store est en préparation. Les `.appx` sont des paquets de soumission non signés : utilisez Setup ou Portable.
+La distribution Microsoft Store est en préparation. Sous Windows, choisissez **Setup** ou **Portable**.
 
 ## macOS et Linux
 

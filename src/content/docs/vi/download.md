@@ -22,7 +22,7 @@ Mở **[bản phát hành chính thức mới nhất](https://github.com/YumeByt
 
 Setup cài thông thường; Portable chạy không cần cài. Bản độc lập chưa ký nên Windows có thể cảnh báo nhà phát hành hoặc uy tín. Kiểm tra nguồn chính thức trước khi quyết định chạy.
 
-Bản Microsoft Store đang chuẩn bị. `.appx` là gói gửi duyệt chưa ký; hãy dùng Setup hoặc Portable.
+Bản Microsoft Store đang được chuẩn bị. Trên Windows, hãy chọn **Setup** hoặc **Portable**.
 
 ## macOS và Linux
 

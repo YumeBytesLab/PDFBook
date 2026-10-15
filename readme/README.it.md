@@ -55,7 +55,7 @@ Scegli il file per il tuo sistema e la tua CPU nell’**[ultima versione](https:
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Le versioni autonome per Windows non sono firmate; quelle per macOS non sono firmate con Developer ID né autenticate da Apple. Consulta la [guida all’installazione](https://wiki.pdfbook.app/it/download/). La distribuzione su Microsoft Store è in preparazione. I file `.appx` sono pacchetti di invio non firmati; su Windows usa **Setup o Portable**.
+Le versioni autonome per Windows non sono firmate; quelle per macOS non sono firmate con Developer ID né autenticate da Apple. Consulta la [guida all’installazione](https://wiki.pdfbook.app/it/download/). La distribuzione su Microsoft Store è in preparazione. Su Windows usa **Setup o Portable**.
 
 ## Inizia gratuitamente
 

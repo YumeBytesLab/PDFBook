@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Отдельные сборки Windows не подписаны; сборки macOS не имеют подписи Developer ID и не прошли нотариальное заверение Apple. См. [руководство по установке](https://wiki.pdfbook.app/ru/download/). Версия для Microsoft Store готовится. Файлы `.appx` — неподписанные пакеты для отправки в Store; в Windows используйте **Setup или Portable**.
+Отдельные сборки Windows не подписаны; сборки macOS не имеют подписи Developer ID и не прошли нотариальное заверение Apple. См. [руководство по установке](https://wiki.pdfbook.app/ru/download/). Версия для Microsoft Store готовится. В Windows используйте **Setup или Portable**.
 
 ## Начните бесплатно
 

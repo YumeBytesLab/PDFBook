@@ -22,7 +22,7 @@ description: "Windows·macOS·Linux에서 x64 또는 ARM64 파일을 고르고, 
 
 일반 설치는 Setup, 설치 없이 실행하려면 Portable을 선택하세요. 독립 배포판은 서명되지 않아 게시자나 평판 확인이 나타날 수 있습니다. 공식 저장소에서 받은 파일인지 확인한 뒤 실행 여부를 결정하세요.
 
-Microsoft Store 버전은 준비 중입니다. `.appx`는 서명되지 않은 제출용 패키지이므로 일반 설치에는 Setup 또는 Portable을 사용하세요.
+Microsoft Store 버전은 준비 중입니다. Windows에서는 **Setup** 또는 **Portable**을 선택하세요.
 
 ## macOS와 Linux
 

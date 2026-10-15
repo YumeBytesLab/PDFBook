@@ -22,7 +22,7 @@ description: "Windows・macOS・Linuxの配布形式とCPUの選び方、初回�
 
 通常のインストールには **Setup**、インストールせず起動する場合は **Portable** を使います。通常配布版は未署名のため、Windowsで発行元や評価に関する確認が表示される場合があります。公式リポジトリからのダウンロードであることを確認して判断してください。
 
-Microsoft Store版は公開準備中です。`.appx` は未署名の提出用パッケージです。通常の利用にはSetupかPortableを選んでください。
+Microsoft Store版は公開準備中です。Windowsで使う場合は **Setup** か **Portable** を選んでください。
 
 ## macOS・Linuxで使う
 

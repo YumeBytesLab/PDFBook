@@ -22,7 +22,7 @@ Buka **[rilis resmi terbaru](https://github.com/YumeBytesLab/PDFBook/releases/la
 
 Setup memasang aplikasi; Portable berjalan tanpa pemasangan. Rilis mandiri belum ditandatangani sehingga Windows mungkin menampilkan peringatan penerbit atau reputasi. Periksa sumber resmi sebelum menjalankan.
 
-Distribusi Microsoft Store sedang disiapkan. `.appx` adalah paket pengajuan tanpa tanda tangan; gunakan Setup atau Portable.
+Distribusi Microsoft Store sedang disiapkan. Untuk Windows, pilih **Setup** atau **Portable**.
 
 ## macOS dan Linux
 

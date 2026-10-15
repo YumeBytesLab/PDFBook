@@ -62,7 +62,7 @@
 
 Windowsの通常配布版は未署名、macOS版はDeveloper ID署名・公証を行っていません。初回起動時の確認はインストールガイドをご覧ください。
 
-Microsoft Store版は公開準備中です。Release内の `.appx` は未署名の提出用パッケージです。Windowsへの通常のインストールには **Setup** か **Portable** を使ってください。
+Microsoft Store版は公開準備中です。Windowsへの通常のインストールには **Setup** か **Portable** を使ってください。
 
 </details>
 

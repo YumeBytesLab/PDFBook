@@ -22,7 +22,7 @@ Open the **[latest official release](https://github.com/YumeBytesLab/PDFBook/rel
 
 Run **Setup** for a regular installation, or launch **Portable** without installing. Standalone builds are unsigned and Windows may show a publisher or reputation warning. Check that the download came from this official repository before deciding to run it.
 
-Microsoft Store distribution is being prepared. The `.appx` attachments are unsigned submission packages; use Setup or Portable for normal installation.
+Microsoft Store distribution is being prepared. For Windows installation, choose **Setup** or **Portable**.
 
 ## macOS and Linux
 

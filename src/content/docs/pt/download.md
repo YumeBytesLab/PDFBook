@@ -22,7 +22,7 @@ Abra a **[versão oficial mais recente](https://github.com/YumeBytesLab/PDFBook/
 
 Setup faz uma instalação normal; Portable funciona sem instalar. As versões independentes não são assinadas e o Windows pode mostrar um aviso de editor ou reputação. Confirme a origem oficial antes de executar.
 
-A Microsoft Store está em preparação. Arquivos `.appx` são pacotes de envio sem assinatura; use Setup ou Portable para instalar.
+A distribuição pela Microsoft Store está em preparação. No Windows, use **Setup** ou **Portable**.
 
 ## macOS e Linux
 

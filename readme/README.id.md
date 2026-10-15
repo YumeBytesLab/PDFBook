@@ -55,7 +55,7 @@ Pilih berkas yang sesuai dengan OS dan CPU Anda dari **[rilis terbaru](https://g
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Versi mandiri Windows belum ditandatangani; versi macOS belum ditandatangani dengan Developer ID atau dinotarisasi. Lihat [panduan pemasangan](https://wiki.pdfbook.app/id/download/). Distribusi Microsoft Store sedang disiapkan. Berkas `.appx` adalah paket pengajuan tanpa tanda tangan; untuk Windows gunakan **Setup atau Portable**.
+Versi mandiri Windows belum ditandatangani; versi macOS belum ditandatangani dengan Developer ID atau dinotarisasi. Lihat [panduan pemasangan](https://wiki.pdfbook.app/id/download/). Distribusi Microsoft Store sedang disiapkan. Untuk Windows gunakan **Setup atau Portable**.
 
 ## Mulai dengan gratis
 

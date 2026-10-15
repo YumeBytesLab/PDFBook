@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Windows 独立发行版尚未签名；macOS 版尚未使用 Developer ID 签名或进行公证。请参阅[安装指南](https://wiki.pdfbook.app/zh/download/)。Microsoft Store 版正在准备中；`.appx` 是未签名的提交包，Windows 用户请使用 **Setup 或 Portable**。
+Windows 独立发行版尚未签名；macOS 版尚未使用 Developer ID 签名或进行公证。请参阅[安装指南](https://wiki.pdfbook.app/zh/download/)。Microsoft Store 版正在准备中；Windows 用户请使用 **Setup 或 Portable**。
 
 ## 从免费书库开始
 

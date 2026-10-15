@@ -55,7 +55,7 @@ Wähle in der **[neuesten Veröffentlichung](https://github.com/YumeBytesLab/PDF
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Die eigenständigen Windows-Versionen sind unsigniert; die macOS-Versionen sind weder mit Developer ID signiert noch notarisiert. Siehe [Installationsanleitung](https://wiki.pdfbook.app/de/download/). Die Microsoft-Store-Veröffentlichung wird vorbereitet. `.appx`-Dateien sind unsignierte Einreichungspakete; unter Windows bitte **Setup oder Portable** verwenden.
+Die eigenständigen Windows-Versionen sind unsigniert; die macOS-Versionen sind weder mit Developer ID signiert noch notarisiert. Siehe [Installationsanleitung](https://wiki.pdfbook.app/de/download/). Die Microsoft-Store-Veröffentlichung wird vorbereitet. Unter Windows bitte **Setup oder Portable** verwenden.
 
 ## Kostenlos anfangen
 
