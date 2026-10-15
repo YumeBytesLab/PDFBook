@@ -1,10 +1,14 @@
 @import './layout.css';
 @import './home.css';
 @import './article.css';
+@import './search.css';
 
 /* Neutral surfaces keep the application screenshots and the reading content central. */
 :root {
-  --sl-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Inter Variable', sans-serif;
+  --sl-font: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Microsoft YaHei', 'Malgun Gothic', sans-serif;
+  --wiki-font-display: Georgia, 'Times New Roman', serif;
+  --wiki-display-leading: 1.2;
+  --wiki-display-tracking: -.04em;
   --sl-color-white: #f5f5f5; --sl-color-gray-1: #e5e5e5; --sl-color-gray-2: #c7c7c7;
   --sl-color-gray-3: #999; --sl-color-gray-4: #737373; --sl-color-gray-5: #363636;
   --sl-color-gray-6: #242424; --sl-color-black: #111;
@@ -28,10 +32,14 @@
   --wiki-action: #171717; --wiki-action-hover: #363636; --wiki-on-action: #fff;
   --wiki-surface: #fff; --wiki-line: #e1e1e1; --wiki-paper: #f6f6f6; --wiki-header: #fff;
 }
+:root:lang(ja) { --wiki-font-display: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; }
+:root:lang(zh-CN) { --wiki-font-display: 'Songti SC', 'Noto Serif CJK SC', SimSun, serif; }
+:root:lang(ko) { --wiki-font-display: Batang, 'Noto Serif CJK KR', serif; }
+:root:is(:lang(ja), :lang(zh-CN), :lang(ko)) { --wiki-display-leading: 1.5; --wiki-display-tracking: -.025em; }
 body { font-kerning: normal; -webkit-font-smoothing: antialiased; }
 a { color: var(--wiki-link); }
 ::selection { background: var(--wiki-ink); color: var(--wiki-surface); }
-:focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 3px; }
 img { max-width: 100%; }
 .wiki-button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 12px 19px; min-height: 44px; border-radius: 11px; background: var(--wiki-action); color: var(--wiki-on-action) !important; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.45; transition: background 150ms ease, transform 120ms ease; }
 .wiki-button:active { transform: scale(.98); }

@@ -1,11 +1,11 @@
 .content-panel { padding-top: 32px; border: 0; }
 .content-panel + .content-panel { padding-top: 12px; }
-.wiki-article-heading { padding-bottom: 16px; }
+.wiki-article-heading { padding-bottom: 24px; }
 .wiki-breadcrumb { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--wiki-muted); font-size: 13px; text-decoration: none; }
 .wiki-breadcrumb > span { color: var(--sl-color-gray-4); }
-.wiki-article-heading h1 { margin: 22px 0 18px; color: var(--wiki-ink); font-size: var(--sl-text-h1); font-weight: 600; line-height: 1.25; letter-spacing: -.04em; text-wrap: balance; }
-.wiki-article-heading > p { max-width: 60ch; color: var(--wiki-muted); font-size: 18px; line-height: 1.85; }
-html:not([data-has-hero]) .sl-markdown-content { color: var(--sl-color-gray-2); font-size: 17px; line-height: 1.9; }
+.wiki-article-heading h1 { margin: 22px 0 20px; color: var(--wiki-ink); font-family: var(--wiki-font-display); font-size: var(--sl-text-h1); font-weight: 400; line-height: var(--wiki-display-leading); letter-spacing: var(--wiki-display-tracking); text-wrap: balance; }
+.wiki-article-heading > p { max-width: 60ch; color: var(--wiki-muted); font-size: 17px; line-height: 1.85; }
+html:not([data-has-hero]) .sl-markdown-content { color: var(--sl-color-gray-2); font-size: 16px; line-height: 1.9; }
 html:not([data-has-hero]) .sl-markdown-content :is(h2, h3) { color: var(--wiki-ink); letter-spacing: -.025em; }
 html:not([data-has-hero]) .sl-markdown-content h2 { margin-top: 2.6em; font-size: 26px; font-weight: 600; line-height: 1.5; }
 html:not([data-has-hero]) .sl-markdown-content h3 { margin-top: 2em; font-size: 20px; font-weight: 600; line-height: 1.5; }
