@@ -4,7 +4,7 @@ This repository contains the public documentation and release downloads. The des
 
 ## Local development
 
-Use Node.js 22.12 or newer supported by the installed Astro version.
+Use the Node.js version pinned in `.node-version`, shared by CI and Cloudflare Pages.
 
 ```sh
 npm ci
@@ -33,3 +33,21 @@ Use short English subjects that describe the change: `docs: clarify Windows inst
 Keep changes focused. Do not append automatic AI co-author trailers or generated promotional footers. Credit human co-authors when their contribution warrants it.
 
 For bugs and requests about the desktop app, use [Issues](https://github.com/YumeBytesLab/PDFBook/issues). For vulnerabilities, follow [the security policy](../SECURITY.md).
+
+## Cloudflare Pages deployment
+
+Deploy this repository as a static Astro site using Git integration:
+
+| Setting | Value |
+| --- | --- |
+| Repository | `YumeBytesLab/PDFBook` |
+| Production branch | `main` |
+| Framework preset | Astro |
+| Root directory | Repository root (leave empty) |
+| Build command | `npm run check:docs` |
+| Build output directory | `dist` |
+| Node.js | `.node-version` |
+
+No server adapter, Pages Functions, runtime bindings or application secrets are required. Keep `https://wiki.pdfbook.app` as the production origin in Astro, metadata and the sitemap. Validate the Pages deployment before attaching the domain. Add the domain in the Pages dashboard before updating its DNS record. Preserve the generated `404.html`; do not add an SPA catch-all rewrite.
+
+References: [Astro on Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/), [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/), [custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
