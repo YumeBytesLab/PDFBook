@@ -37,6 +37,9 @@
 :root:lang(ko) { --wiki-font-display: Batang, 'Noto Serif CJK KR', serif; }
 :root:is(:lang(ja), :lang(zh-CN), :lang(ko)) { --wiki-display-leading: 1.5; --wiki-display-tracking: -.025em; }
 body { font-kerning: normal; -webkit-font-smoothing: antialiased; }
+/* Hide scrollbar chrome without changing overflow or scroll interaction. */
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
 a { color: var(--wiki-link); }
 ::selection { background: var(--wiki-ink); color: var(--wiki-surface); }
 :focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 3px; }
