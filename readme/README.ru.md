@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Скачать PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/ru">Официальный сайт</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Руководства (на английском)</a>
+  <a href="https://wiki.pdfbook.app/ru/">Руководства</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Отдельные сборки Windows не подписаны; сборки macOS не имеют подписи Developer ID и не прошли нотариальное заверение Apple. См. [руководство по установке (на английском)](https://wiki.pdfbook.app/download/). Версия для Microsoft Store готовится. Файлы `.appx` — неподписанные пакеты для отправки в Store; в Windows используйте **Setup или Portable**.
+Отдельные сборки Windows не подписаны; сборки macOS не имеют подписи Developer ID и не прошли нотариальное заверение Apple. См. [руководство по установке](https://wiki.pdfbook.app/ru/download/). Версия для Microsoft Store готовится. Файлы `.appx` — неподписанные пакеты для отправки в Store; в Windows используйте **Setup или Portable**.
 
 ## Начните бесплатно
 
@@ -69,7 +69,7 @@
 
 ## Руководства и поддержка
 
-[Начало работы (на английском)](https://wiki.pdfbook.app/getting-started/) · [Читалка (на английском)](https://wiki.pdfbook.app/features/reader/) · [FAQ (на английском)](https://wiki.pdfbook.app/faq/)
+[Начало работы](https://wiki.pdfbook.app/ru/getting-started/) · [Читалка](https://wiki.pdfbook.app/ru/features/reader/) · [FAQ](https://wiki.pdfbook.app/ru/faq/)
 
 [Сообщить об ошибке](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Обсуждения](https://github.com/YumeBytesLab/PDFBook/discussions) · [Связаться (на английском)](https://pdfbook.app/contact) · [Безопасность (на английском)](../SECURITY.md)
 

@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">PDFBook herunterladen</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/de">Website</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Anleitungen (Englisch)</a>
+  <a href="https://wiki.pdfbook.app/de/">Anleitungen</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Wähle in der **[neuesten Veröffentlichung](https://github.com/YumeBytesLab/PDF
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Die eigenständigen Windows-Versionen sind unsigniert; die macOS-Versionen sind weder mit Developer ID signiert noch notarisiert. Siehe [Installationsanleitung (Englisch)](https://wiki.pdfbook.app/download/). Die Microsoft-Store-Veröffentlichung wird vorbereitet. `.appx`-Dateien sind unsignierte Einreichungspakete; unter Windows bitte **Setup oder Portable** verwenden.
+Die eigenständigen Windows-Versionen sind unsigniert; die macOS-Versionen sind weder mit Developer ID signiert noch notarisiert. Siehe [Installationsanleitung](https://wiki.pdfbook.app/de/download/). Die Microsoft-Store-Veröffentlichung wird vorbereitet. `.appx`-Dateien sind unsignierte Einreichungspakete; unter Windows bitte **Setup oder Portable** verwenden.
 
 ## Kostenlos anfangen
 
@@ -69,7 +69,7 @@ PDF-Lesen, Bibliothek, PDF-Erstellung und Konvertierung laufen auf deinem Comput
 
 ## Anleitungen und Hilfe
 
-[Erste Schritte (Englisch)](https://wiki.pdfbook.app/getting-started/) · [Reader (Englisch)](https://wiki.pdfbook.app/features/reader/) · [FAQ (Englisch)](https://wiki.pdfbook.app/faq/)
+[Erste Schritte](https://wiki.pdfbook.app/de/getting-started/) · [Reader](https://wiki.pdfbook.app/de/features/reader/) · [FAQ](https://wiki.pdfbook.app/de/faq/)
 
 [Fehler melden](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Diskussionen](https://github.com/YumeBytesLab/PDFBook/discussions) · [Kontakt (Englisch)](https://pdfbook.app/contact) · [Sicherheit (Englisch)](../SECURITY.md)
 

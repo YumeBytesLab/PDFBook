@@ -1,24 +1,28 @@
 ---
-title: Read PDFs, books, and manga
-description: Use PDFBook's page-flip and vertical-scroll reader, right-to-left manga mode, search, bookmarks, and Floating Reader.
+title: "Read books, manga and papers"
+description: "Choose page turning, scrolling, spreads or right-to-left reading. Use search, bookmarks and a Floating Reader alongside other apps."
 ---
 
-## Choose how to read
+## Set the layout for your book
 
-Use **page flip** for single pages or two-page spreads, or **vertical scroll** for a continuous document. For manga, choose **right-to-left** reading; direction can be stored per book.
+Open a PDF from **Library** or **Reader**. The toolbar switches between **Page flip** and **Vertical scroll**. In page-flip mode, choose one page or a two-page spread.
 
-The reader offers text search, bookmarks with optional labels, zoom, and navigation through the PDF's own table of contents. Text search needs a searchable text layer; it does not add OCR to scanned pages.
+For manga, open the display controls and set right-to-left reading. Direction can be saved per book, so manga and left-to-right papers can share a library. Zoom and the page-number control help when scans have unusual dimensions.
 
-## Continue where you stopped
+## Find and keep your place
 
-With reading-position memory enabled, PDFBook saves your place as you read. Password-protected PDFs prompt for the password, with an option to remember it for that book.
+Use text search to find words in a PDF with a searchable text layer. Image-only scans need an existing text layer; PDFBook does not add OCR. The contents panel shows the document's own table of contents when present.
 
-## Focus mode and Floating Reader
+Add a bookmark to the current page, optionally give it a label, and return from the bookmarks panel. Enable reading-position memory in **Settings → Reader** to resume where you stopped.
 
-Focus mode hides the surrounding interface. The **Floating Reader** opens an always-on-top reading window for use alongside other apps.
+## Read beside another app
 
-Its first free session is unmetered; subsequent free use includes **60 minutes of active reading per calendar month**. Pro and Lifetime are unmetered.
+Focus mode hides the surrounding interface. The Floating Reader button opens an always-on-top reading window for use beside notes or other work.
 
-## Notes and bookmarks
+The first free Floating Reader session is unmetered. Later free use includes **60 minutes of active reading per calendar month**, resetting at the start of the month in UTC. Pro and Lifetime remove this time limit. See [plans](/plans-and-licenses/).
 
-A note belongs to the whole book. It is not a PDF annotation: PDFBook does not provide highlighting, drawing, or comments placed on the page. Use bookmarks to return to a page and library notes for your thoughts.
+## Passwords and notes
+
+Enter the PDF password when asked; it can be remembered for that book. Notes in the library belong to the whole book. They are separate from PDF pages: highlighting, drawing and page annotations are not provided. For display problems, see [troubleshooting](/troubleshooting/).
+
+![PDFBook reader with a two-page book spread](/images/reader-en.webp)

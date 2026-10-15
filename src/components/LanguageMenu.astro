@@ -1,0 +1,35 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import { docPath, localeFromRoute, locales, slugs, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const path = Astro.url.pathname.replace(/^\//, '').replace(/\/$/, '');
+const candidate = locale === 'en' ? path : path.split('/').slice(1).join('/');
+const slug = slugs.includes(candidate) ? candidate : '';
+---
+<wiki-language-menu>
+  <details class="wiki-language">
+    <summary aria-label={ui[locale].language}>
+      <Icon name="translate" size="18" /><span>{locales[locale].name}</span><Icon name="down-caret" size="12" />
+    </summary>
+    <div class="wiki-language-panel">
+      {Object.entries(locales).map(([code, item]) => (
+        <a href={docPath(code, slug)} lang={item.lang} hreflang={item.lang} aria-current={code === locale ? 'true' : undefined}>
+          <span>{item.name}</span>{code === locale && <Icon name="approve-check" size="16" />}
+        </a>
+      ))}
+    </div>
+  </details>
+</wiki-language-menu>
+<script>
+  class WikiLanguageMenu extends HTMLElement {
+    connectedCallback() {
+      const details = this.querySelector('details')!;
+      const summary = this.querySelector('summary')!;
+      const close = () => { details.open = false; };
+      document.addEventListener('click', event => { if (!this.contains(event.target as Node)) close(); });
+      document.addEventListener('focusin', event => { if (!this.contains(event.target as Node)) close(); });
+      this.addEventListener('keydown', event => { if (event.key === 'Escape' && details.open) { close(); summary.focus(); } });
+    }
+  }
+  customElements.define('wiki-language-menu', WikiLanguageMenu);
+</script>

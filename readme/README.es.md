@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Descargar PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/es">Sitio web</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Guías (en inglés)</a>
+  <a href="https://wiki.pdfbook.app/es/">Guías</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Elige el archivo para tu sistema y CPU en la **[última versión](https://github
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Las versiones independientes de Windows no están firmadas; las de macOS no tienen firma Developer ID ni notarización. Consulta la [guía de instalación (en inglés)](https://wiki.pdfbook.app/download/). La versión de Microsoft Store está en preparación. Los archivos `.appx` son paquetes de envío sin firmar; en Windows, usa **Setup o Portable**.
+Las versiones independientes de Windows no están firmadas; las de macOS no tienen firma Developer ID ni notarización. Consulta la [guía de instalación](https://wiki.pdfbook.app/es/download/). La versión de Microsoft Store está en preparación. Los archivos `.appx` son paquetes de envío sin firmar; en Windows, usa **Setup o Portable**.
 
 ## Empieza gratis
 
@@ -69,7 +69,7 @@ La lectura, la biblioteca, la creación y la conversión de PDF se procesan en t
 
 ## Guías y ayuda
 
-[Primeros pasos (en inglés)](https://wiki.pdfbook.app/getting-started/) · [Lector (en inglés)](https://wiki.pdfbook.app/features/reader/) · [Preguntas frecuentes (en inglés)](https://wiki.pdfbook.app/faq/)
+[Primeros pasos](https://wiki.pdfbook.app/es/getting-started/) · [Lector](https://wiki.pdfbook.app/es/features/reader/) · [Preguntas frecuentes](https://wiki.pdfbook.app/es/faq/)
 
 [Informar de un error](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Debates](https://github.com/YumeBytesLab/PDFBook/discussions) · [Contacto (en inglés)](https://pdfbook.app/contact) · [Seguridad (en inglés)](../SECURITY.md)
 

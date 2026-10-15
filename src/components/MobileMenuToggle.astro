@@ -1,0 +1,32 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+---
+<wiki-menu-button class="print:hidden" aria-expanded="false">
+  <button aria-expanded="false" aria-label={Astro.locals.t('menuButton.accessibleLabel')} aria-controls="starlight__sidebar" class="md:sl-hidden">
+    <Icon name="bars" class="open-menu" /><Icon name="close" class="close-menu" />
+  </button>
+</wiki-menu-button>
+<script>
+  class WikiMenuButton extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('button')!;
+      const pane = document.getElementById('starlight__sidebar')!;
+      const desktop = matchMedia('(min-width: 50rem)');
+      const setOpen = (open: boolean, returnFocus = false) => {
+        this.setAttribute('aria-expanded', String(open));
+        button.setAttribute('aria-expanded', String(open));
+        document.body.toggleAttribute('data-mobile-menu-expanded', open && !desktop.matches);
+        pane.inert = !open && !desktop.matches;
+        const main = document.querySelector<HTMLElement>('.main-frame');
+        if (main) main.inert = open && !desktop.matches;
+        if (returnFocus) button.focus();
+      };
+      setOpen(false);
+      button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true); });
+      pane.addEventListener('click', event => { if ((event.target as Element).closest('a')) setOpen(false); });
+      desktop.addEventListener('change', () => setOpen(false));
+    }
+  }
+  customElements.define('wiki-menu-button', WikiMenuButton);
+</script>

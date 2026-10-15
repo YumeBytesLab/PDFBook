@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Baixar PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/pt">Site oficial</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Guias (em inglês)</a>
+  <a href="https://wiki.pdfbook.app/pt/">Guias</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Escolha o arquivo para seu sistema e CPU na **[versão mais recente](https://git
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-As versões independentes para Windows não são assinadas; as versões para macOS não têm assinatura Developer ID nem notarização. Veja o [guia de instalação (em inglês)](https://wiki.pdfbook.app/download/). A distribuição pela Microsoft Store está em preparação. Os arquivos `.appx` são pacotes de envio sem assinatura; no Windows, use **Setup ou Portable**.
+As versões independentes para Windows não são assinadas; as versões para macOS não têm assinatura Developer ID nem notarização. Veja o [guia de instalação](https://wiki.pdfbook.app/pt/download/). A distribuição pela Microsoft Store está em preparação. Os arquivos `.appx` são pacotes de envio sem assinatura; no Windows, use **Setup ou Portable**.
 
 ## Comece gratuitamente
 
@@ -69,7 +69,7 @@ Leitura, biblioteca, criação e conversão de PDFs funcionam no seu computador.
 
 ## Guias e suporte
 
-[Primeiros passos (em inglês)](https://wiki.pdfbook.app/getting-started/) · [Leitor (em inglês)](https://wiki.pdfbook.app/features/reader/) · [Perguntas frequentes (em inglês)](https://wiki.pdfbook.app/faq/)
+[Primeiros passos](https://wiki.pdfbook.app/pt/getting-started/) · [Leitor](https://wiki.pdfbook.app/pt/features/reader/) · [Perguntas frequentes](https://wiki.pdfbook.app/pt/faq/)
 
 [Relatar um erro](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Discussões](https://github.com/YumeBytesLab/PDFBook/discussions) · [Contato (em inglês)](https://pdfbook.app/contact) · [Segurança (em inglês)](../SECURITY.md)
 

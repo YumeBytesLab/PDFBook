@@ -1,27 +1,30 @@
 ---
-title: Get started with PDFBook
-description: Install PDFBook, add your first local PDF or folder, and start reading. A setup guide for Windows, macOS, and Linux.
+title: "Your first book in PDFBook"
+description: "Install the app, add a PDF or a folder, and choose a comfortable reading layout. Start without an account."
 ---
 
-## 1. Install PDFBook
+## Install and make yourself at home
 
-[Download the build for your OS and CPU](/download/), then open the app and complete its introductory setup.
+Choose the build for your OS and processor in the [installation guide](/download/). Open PDFBook and complete or skip the introductory tour. You can read local PDFs without an account or AI setup.
 
-## 2. Add a PDF or a folder
+In **Settings → General**, choose your language, appearance and interface size. The intro can be replayed from this tab.
 
-Open **Library** and add a local PDF or a folder of PDFs. Watched folders can be scanned again to pick up files added later. Use the library's refresh control to update the catalog; it is not a continuous background file watcher.
+## Add a book or a whole folder
 
-The free library supports up to **50 books**. Files stay in their local folders; the library stores their catalog information.
+1. Open **Library** from the sidebar.
+2. Use **Add book** for a PDF, or **Add sync path** for a folder you want to include in your library.
+3. Wait for validation and cover thumbnails, then open a book.
 
-## 3. Start reading
+PDFs remain in their original folders. A library entry records the file location and your reading information; adding a book does not create a backup copy. Free libraries hold up to **50 books**.
 
-Open a book and choose page-flip or vertical-scroll mode. Use right-to-left reading for manga, search document text, or add a bookmark. Reading-position memory lets you continue later when that setting is enabled.
+## Choose how to read
 
-![PDFBook reader with a two-page spread](/images/reader-en.webp)
+Use **Page flip** for turning pages or **Vertical scroll** for scrolling. Manga can use a two-page spread and right-to-left direction. Turn on reading-position memory in the Reader settings if you want to resume later.
 
-## Explore next
+## Bring in books added later
 
-- [Reader and manga settings](/features/reader/)
-- [Folders, tags, and reading status](/features/library/)
-- [Create PDFs and extract images](/features/creating-pdfs/)
-- [Plans, privacy, and troubleshooting](/faq/)
+Use **Sync files** after putting new PDFs in a sync folder. These folders are scanned on request or at configured startup scans; they are not continuously watched in the background.
+
+Next, learn about [reading controls](/features/reader/), [library organization](/features/library/) and [PDF tools](/features/creating-pdfs/).
+
+![PDFBook reader with a two-page book spread](/images/reader-en.webp)

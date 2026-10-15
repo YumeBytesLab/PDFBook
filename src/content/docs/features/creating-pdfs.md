@@ -1,20 +1,27 @@
 ---
-title: Create PDFs, convert files, and extract images
-description: Build PDFs from JPG and PNG images, convert supported documents and e-books, and extract embedded PDF images with PDFBook's local tools.
+title: "Create, convert and extract"
+description: "Make PDFs from JPG/PNG scans, convert supported e-books and documents, or save images embedded in an existing PDF."
 ---
 
 ## Create a PDF from images
 
-Open **Creator**, add JPG or PNG images, arrange their order, and export a PDF. This works well for a folder of scans or screenshots. The current Creator does not accept WebP images or import arbitrary PDF pages into a new document.
+1. Open **Creator** and choose **Add images** or **Pick folder**.
+2. Add **JPG/PNG** images and arrange the page order. Folder imports use natural file-name order; inspect the list before exporting.
+3. Choose page size, fit and margins. Optionally set an opening password.
+4. Select **Create PDF** and choose where to save the PDF.
+
+Keep the password: a protected output needs it to open. The Creator accepts images, not WebP or arbitrary pages imported from another PDF.
 
 ## Convert documents and e-books
 
-Open **Converter**, choose supported files and an output folder, and convert them to PDF. Supported source extensions include EPUB / MOBI / AZW3, DOCX, Markdown, text, HTML, and CBZ / CBR. Conversion is local; results depend on the source file's structure and protection.
+Open **Converter**, add files, choose an output folder and run the conversion. You can choose whether to add successful results to the library.
 
-## Extract embedded images
+Supported extensions are **EPUB/KEPUB, MOBI, AZW/AZW3/KF8, DOCX, MD/Markdown, TXT/Text, HTML/HTM and CBZ/CBR**. The reader opens the resulting PDF; it is not a native EPUB reader. DRM-protected sources are skipped, and complex layouts may change during conversion. Check each result before discarding an original.
 
-Open **Extractor** and choose a PDF. Preview its embedded images, select the ones you need, and save them as PNG files. This extracts image objects; it is not a PDF page-splitting tool or a full-page rendering export.
+## Extract images already inside a PDF
 
-## Capture pages from another app
+Open **Extractor**, choose **Pick PDF**, and wait for image previews. Select individual images or save them all to an output folder as **PNG**. Password-protected PDFs prompt for a password.
 
-The [screen-capture tool](/features/screen-capture/) can collect visible pages into a PDF on supported systems. Availability differs by OS and Linux display session.
+Extraction saves embedded image objects, not complete rendered pages or selected pages as a new PDF. A document made entirely of text and vector drawings may have no extractable images.
+
+For collecting visible pages from another application, use [screen capture](/features/screen-capture/) on a supported system.

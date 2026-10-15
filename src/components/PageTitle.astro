@@ -1,0 +1,10 @@
+---
+import { docPath, localeFromRoute, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const { title, description } = Astro.locals.starlightRoute.entry.data;
+---
+<div class="wiki-article-heading">
+  <a class="wiki-breadcrumb" href={docPath(locale)}>PDFBook <span>/</span> {ui[locale].guide}</a>
+  <h1 id="_top">{title}</h1>
+  <p>{description}</p>
+</div>

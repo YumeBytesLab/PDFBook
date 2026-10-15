@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">下载 PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/zh">官方网站</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">使用指南（英语）</a>
+  <a href="https://wiki.pdfbook.app/zh/">使用指南</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Windows 独立发行版尚未签名；macOS 版尚未使用 Developer ID 签名或进行公证。请参阅[安装指南（英语）](https://wiki.pdfbook.app/download/)。Microsoft Store 版正在准备中；`.appx` 是未签名的提交包，Windows 用户请使用 **Setup 或 Portable**。
+Windows 独立发行版尚未签名；macOS 版尚未使用 Developer ID 签名或进行公证。请参阅[安装指南](https://wiki.pdfbook.app/zh/download/)。Microsoft Store 版正在准备中；`.appx` 是未签名的提交包，Windows 用户请使用 **Setup 或 Portable**。
 
 ## 从免费书库开始
 
@@ -69,7 +69,7 @@ PDF 阅读、书库保存、PDF 创建和转换在本机进行，**阅读无需�
 
 ## 指南与支持
 
-[入门（英语）](https://wiki.pdfbook.app/getting-started/) · [阅读器（英语）](https://wiki.pdfbook.app/features/reader/) · [常见问题（英语）](https://wiki.pdfbook.app/faq/)
+[入门](https://wiki.pdfbook.app/zh/getting-started/) · [阅读器](https://wiki.pdfbook.app/zh/features/reader/) · [常见问题](https://wiki.pdfbook.app/zh/faq/)
 
 [报告问题](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [讨论](https://github.com/YumeBytesLab/PDFBook/discussions) · [联系支持（英语）](https://pdfbook.app/contact) · [安全政策（英语）](../SECURITY.md)
 

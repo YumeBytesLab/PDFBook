@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Unduh PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/id">Situs resmi</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Panduan (bahasa Inggris)</a>
+  <a href="https://wiki.pdfbook.app/id/">Panduan</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Pilih berkas yang sesuai dengan OS dan CPU Anda dari **[rilis terbaru](https://g
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Versi mandiri Windows belum ditandatangani; versi macOS belum ditandatangani dengan Developer ID atau dinotarisasi. Lihat [panduan pemasangan (bahasa Inggris)](https://wiki.pdfbook.app/download/). Distribusi Microsoft Store sedang disiapkan. Berkas `.appx` adalah paket pengajuan tanpa tanda tangan; untuk Windows gunakan **Setup atau Portable**.
+Versi mandiri Windows belum ditandatangani; versi macOS belum ditandatangani dengan Developer ID atau dinotarisasi. Lihat [panduan pemasangan](https://wiki.pdfbook.app/id/download/). Distribusi Microsoft Store sedang disiapkan. Berkas `.appx` adalah paket pengajuan tanpa tanda tangan; untuk Windows gunakan **Setup atau Portable**.
 
 ## Mulai dengan gratis
 
@@ -69,7 +69,7 @@ Pembacaan PDF, penyimpanan pustaka, pembuatan, dan konversi berjalan di komputer
 
 ## Panduan dan bantuan
 
-[Memulai (bahasa Inggris)](https://wiki.pdfbook.app/getting-started/) · [Pembaca (bahasa Inggris)](https://wiki.pdfbook.app/features/reader/) · [FAQ (bahasa Inggris)](https://wiki.pdfbook.app/faq/)
+[Memulai](https://wiki.pdfbook.app/id/getting-started/) · [Pembaca](https://wiki.pdfbook.app/id/features/reader/) · [FAQ](https://wiki.pdfbook.app/id/faq/)
 
 [Laporkan bug](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Diskusi](https://github.com/YumeBytesLab/PDFBook/discussions) · [Hubungi kami (bahasa Inggris)](https://pdfbook.app/contact) · [Keamanan (bahasa Inggris)](../SECURITY.md)
 

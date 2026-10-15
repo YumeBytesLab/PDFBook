@@ -2,7 +2,7 @@
 
 `app-icon.png` is an unchanged copy of the official website's `public/icon-512.png` (512 × 512), copied on 2026-10-15. It is the existing PDFBook app mark, used for the README header.
 
-These are unchanged copies of real PDFBook 1.1.0 captures used on the official website, pdfbook.app. The example books are demonstration documents.
+The screenshots below are unchanged copies of real PDFBook 1.1.0 captures used on the official website, pdfbook.app. The example books are demonstration documents.
 
 - `library-en.webp` and `library-ja.webp`: library, 1920 × 1200.
 - `reader-en.webp` and `reader-ja.webp`: reader, 1920 × 1200.

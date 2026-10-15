@@ -1,0 +1,21 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import LanguageMenu from './LanguageMenu.astro';
+import { docPath, localeFromRoute, productPath, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const text = ui[locale];
+---
+<div class="wiki-header">
+  <a class="wiki-brand" href={docPath(locale)} aria-label={`PDFBook · ${text.guide}`}>
+    <img src="/images/app-icon.png" alt="" width="30" height="30" />
+    <span>PDFBook</span><span class="wiki-brand-section">{text.guide}</span>
+  </a>
+  <div class="wiki-header-actions">
+    <a class="wiki-website" href={productPath(locale)}>{text.website}</a>
+    <Search />
+    <div class="wiki-theme"><ThemeSelect /></div>
+    <LanguageMenu />
+    <a class="wiki-button wiki-header-download" href={docPath(locale, 'download')}>{text.download}</a>
+  </div>
+</div>

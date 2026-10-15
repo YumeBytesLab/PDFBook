@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Télécharger PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/fr">Site officiel</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Guides (en anglais)</a>
+  <a href="https://wiki.pdfbook.app/fr/">Guides</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Choisissez le fichier correspondant à votre système et à votre processeur dan
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Les versions autonomes Windows ne sont pas signées ; les versions macOS ne sont ni signées avec Developer ID ni notariées. Consultez le [guide d’installation (en anglais)](https://wiki.pdfbook.app/download/). La distribution Microsoft Store est en préparation. Les fichiers `.appx` sont des paquets de soumission non signés ; sous Windows, choisissez **Setup ou Portable**.
+Les versions autonomes Windows ne sont pas signées ; les versions macOS ne sont ni signées avec Developer ID ni notariées. Consultez le [guide d’installation](https://wiki.pdfbook.app/fr/download/). La distribution Microsoft Store est en préparation. Les fichiers `.appx` sont des paquets de soumission non signés ; sous Windows, choisissez **Setup ou Portable**.
 
 ## Commencez gratuitement
 
@@ -69,7 +69,7 @@ La lecture, la bibliothèque, la création et la conversion de PDF fonctionnent 
 
 ## Guides et assistance
 
-[Premiers pas (en anglais)](https://wiki.pdfbook.app/getting-started/) · [Lecteur (en anglais)](https://wiki.pdfbook.app/features/reader/) · [FAQ (en anglais)](https://wiki.pdfbook.app/faq/)
+[Premiers pas](https://wiki.pdfbook.app/fr/getting-started/) · [Lecteur](https://wiki.pdfbook.app/fr/features/reader/) · [FAQ](https://wiki.pdfbook.app/fr/faq/)
 
 [Signaler un bug](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Discussions](https://github.com/YumeBytesLab/PDFBook/discussions) · [Contact (en anglais)](https://pdfbook.app/contact) · [Sécurité (en anglais)](../SECURITY.md)
 

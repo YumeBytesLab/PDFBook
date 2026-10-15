@@ -1,26 +1,25 @@
 ---
-title: Capture pages into a PDF
-description: Use PDFBook's screen-capture tool on Windows or Linux X11, with region selection and page-turn support where available.
+title: "Capture visible pages into a PDF"
+description: "Collect a window’s visible pages, crop the reading area and send captured images to Creator on Windows or Linux X11."
 ---
 
-The capture tool creates a PDF from pages visible in another app. Open it from **Creator**, choose a window or screen, mark the page area, and collect the pages you need.
+## Check availability first
 
-## Supported systems
+Screen capture is available on **Windows** and **Linux X11**. It is disabled on macOS and Linux Wayland. Automatic page turning is a separate capability: it depends on the keyboard helper, architecture and permissions. Linux ARM64 can capture under X11 but does not have the automatic-turn helper.
 
-| Environment | Current availability |
-| --- | --- |
-| Windows | Screen capture supported; automatic page turning depends on the available native key-injection helper |
-| Linux X11 | Screen capture supported; automatic turning depends on the native helper and architecture |
-| Linux Wayland | Not currently supported |
-| macOS | Not currently supported in the distributed builds |
+The app reports available capabilities. A missing or disabled capture control does not prevent you from creating a PDF from saved JPG/PNG images.
 
-The app checks availability for your environment. Automatic page turning is a separate capability from screen capture; do not assume every build has it.
+## Capture a window
 
-## Capture a document
+1. Open **Creator** and select **Capture from screen**.
+2. Choose the target window and set the capture area. Crop out toolbars or margins you do not want in the PDF.
+3. Set the page count and capture timing. If automatic turning is available, choose the direction/key and allow enough delay for the target app to finish drawing each page.
+4. Start the capture, inspect the resulting images, then use Creator to arrange and export the PDF.
 
-1. Open the source app on the page you want to capture.
-2. Choose its window and mark one region, or two regions for a spread.
-3. Set the capture count and timing. Configure a page-turn key if the app offers automatic turning.
-4. Start capture, check the collected pages, and save the PDF.
+Keep the target window available during capture. A blank, unchanged or obscured view cannot produce the intended next page.
 
-Use **Stop** or press **Esc** to stop a running capture.
+## If pages repeat or are blank
+
+Capture one visible page first. Make sure the target window is selected and not minimized. Increase the delay if a page-turn animation is still in progress. If automatic turning is unavailable, do not assume the capture itself is broken; check the capability message and use image input or an available manual workflow instead.
+
+Capture collects the visible screen; it does not import the source app's document, add OCR or recover hidden pages. For normal image-to-PDF export, see [PDF tools](/features/creating-pdfs/).

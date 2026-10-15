@@ -1,0 +1,12 @@
+{
+  "pagefind.clear_search": "Effacer",
+  "pagefind.load_more": "Afficher plus de résultats",
+  "pagefind.search_label": "Rechercher dans les guides",
+  "pagefind.filters_label": "Filtres",
+  "pagefind.zero_results": "Aucun résultat pour [SEARCH_TERM]",
+  "pagefind.many_results": "[COUNT] résultats pour [SEARCH_TERM]",
+  "pagefind.one_result": "[COUNT] résultat pour [SEARCH_TERM]",
+  "pagefind.alt_search": "Aucun résultat pour [SEARCH_TERM]. Voici les résultats pour [DIFFERENT_TERM].",
+  "pagefind.search_suggestion": "Aucun résultat pour [SEARCH_TERM]. Essayez l’une de ces recherches :",
+  "pagefind.searching": "Recherche de [SEARCH_TERM]…"
+}

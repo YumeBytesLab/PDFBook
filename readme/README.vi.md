@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">Tải PDFBook</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/vi">Trang web chính thức</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">Hướng dẫn (tiếng Anh)</a>
+  <a href="https://wiki.pdfbook.app/vi/">Hướng dẫn</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@ Chọn tệp phù hợp với hệ điều hành và CPU trong **[bản phát h�
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Các bản Windows độc lập chưa được ký; các bản macOS chưa có chữ ký Developer ID hoặc công chứng Apple. Xem [hướng dẫn cài đặt (tiếng Anh)](https://wiki.pdfbook.app/download/). Bản Microsoft Store đang được chuẩn bị. Tệp `.appx` là gói gửi duyệt chưa ký; trên Windows hãy dùng **Setup hoặc Portable**.
+Các bản Windows độc lập chưa được ký; các bản macOS chưa có chữ ký Developer ID hoặc công chứng Apple. Xem [hướng dẫn cài đặt](https://wiki.pdfbook.app/vi/download/). Bản Microsoft Store đang được chuẩn bị. Tệp `.appx` là gói gửi duyệt chưa ký; trên Windows hãy dùng **Setup hoặc Portable**.
 
 ## Bắt đầu miễn phí
 
@@ -69,7 +69,7 @@ Việc đọc, lưu thư viện, tạo và chuyển đổi PDF chạy trên máy
 
 ## Hướng dẫn và hỗ trợ
 
-[Bắt đầu (tiếng Anh)](https://wiki.pdfbook.app/getting-started/) · [Trình đọc (tiếng Anh)](https://wiki.pdfbook.app/features/reader/) · [FAQ (tiếng Anh)](https://wiki.pdfbook.app/faq/)
+[Bắt đầu](https://wiki.pdfbook.app/vi/getting-started/) · [Trình đọc](https://wiki.pdfbook.app/vi/features/reader/) · [FAQ](https://wiki.pdfbook.app/vi/faq/)
 
 [Báo lỗi](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [Thảo luận](https://github.com/YumeBytesLab/PDFBook/discussions) · [Liên hệ (tiếng Anh)](https://pdfbook.app/contact) · [Bảo mật (tiếng Anh)](../SECURITY.md)
 

@@ -17,7 +17,7 @@
 <p align="center">
   <strong><a href="https://github.com/YumeBytesLab/PDFBook/releases/latest">PDFBook 다운로드</a></strong> &nbsp; · &nbsp;
   <a href="https://pdfbook.app/ko">공식 웹사이트</a> &nbsp; · &nbsp;
-  <a href="https://wiki.pdfbook.app/">사용 가이드 (영어)</a>
+  <a href="https://wiki.pdfbook.app/ko/">사용 가이드</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@
 | macOS | DMG | Apple Silicon (ARM64) / Intel (x64) |
 | Linux | AppImage / deb | x64 / amd64 / ARM64 |
 
-Windows 독립 배포판은 서명되지 않았으며, macOS 버전은 Developer ID 서명·공증이 적용되지 않았습니다. [설치 가이드 (영어)](https://wiki.pdfbook.app/download/)를 확인하세요. Microsoft Store 버전은 준비 중입니다. `.appx`는 서명되지 않은 제출용 패키지이므로 Windows에서는 **Setup 또는 Portable**을 사용하세요.
+Windows 독립 배포판은 서명되지 않았으며, macOS 버전은 Developer ID 서명·공증이 적용되지 않았습니다. [설치 가이드](https://wiki.pdfbook.app/ko/download/)를 확인하세요. Microsoft Store 버전은 준비 중입니다. `.appx`는 서명되지 않은 제출용 패키지이므로 Windows에서는 **Setup 또는 Portable**을 사용하세요.
 
 ## 무료로 책장을 시작하세요
 
@@ -69,7 +69,7 @@ PDF 읽기, 라이브러리 저장, PDF 생성·변환은 PC에서 처리하며 
 
 ## 가이드와 지원
 
-[시작하기 (영어)](https://wiki.pdfbook.app/getting-started/) · [리더 (영어)](https://wiki.pdfbook.app/features/reader/) · [FAQ (영어)](https://wiki.pdfbook.app/faq/)
+[시작하기](https://wiki.pdfbook.app/ko/getting-started/) · [리더](https://wiki.pdfbook.app/ko/features/reader/) · [FAQ](https://wiki.pdfbook.app/ko/faq/)
 
 [버그 제보](https://github.com/YumeBytesLab/PDFBook/issues/new/choose) · [토론](https://github.com/YumeBytesLab/PDFBook/discussions) · [문의 (영어)](https://pdfbook.app/contact) · [보안 정책 (영어)](../SECURITY.md)
 

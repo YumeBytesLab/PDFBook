@@ -1,0 +1,12 @@
+{
+  "pagefind.clear_search": "Hapus",
+  "pagefind.load_more": "Muat hasil lainnya",
+  "pagefind.search_label": "Cari di panduan",
+  "pagefind.filters_label": "Filter",
+  "pagefind.zero_results": "Tidak ada hasil untuk [SEARCH_TERM]",
+  "pagefind.many_results": "[COUNT] hasil untuk [SEARCH_TERM]",
+  "pagefind.one_result": "[COUNT] hasil untuk [SEARCH_TERM]",
+  "pagefind.alt_search": "Tidak ada hasil untuk [SEARCH_TERM]. Menampilkan hasil untuk [DIFFERENT_TERM].",
+  "pagefind.search_suggestion": "Tidak ada hasil untuk [SEARCH_TERM]. Coba salah satu pencarian berikut:",
+  "pagefind.searching": "Mencari [SEARCH_TERM]…"
+}
