@@ -1,0 +1,77 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import NativeThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+const label = Astro.locals.t('themeSelect.accessibleLabel');
+const choices = [
+  { value: 'dark', icon: 'moon', label: Astro.locals.t('themeSelect.dark') },
+  { value: 'light', icon: 'sun', label: Astro.locals.t('themeSelect.light') },
+  { value: 'auto', icon: 'laptop', label: Astro.locals.t('themeSelect.auto') },
+] as const;
+---
+<wiki-theme-menu>
+  {/* Keep Starlight's persistence, system-theme listener and early theme initialization. */}
+  <div hidden><NativeThemeSelect /></div>
+  <details class="wiki-theme-details">
+    <summary aria-label={label} data-label={label}>
+      {choices.map(choice => <span data-theme-icon={choice.value} hidden={choice.value !== 'auto'}><Icon name={choice.icon} size="18" /></span>)}
+      <span class="wiki-theme-label">{Astro.locals.t('themeSelect.auto')}</span>
+    </summary>
+    <div class="wiki-theme-panel" role="group" aria-label={label}>
+      {choices.map(choice => (
+        <button type="button" data-theme-choice={choice.value} aria-pressed={choice.value === 'auto'}>
+          <Icon name={choice.icon} size="17" /><span>{choice.label}</span><Icon name="approve-check" size="15" class="wiki-theme-check" />
+        </button>
+      ))}
+    </div>
+  </details>
+</wiki-theme-menu>
+<script>
+  class WikiThemeMenu extends HTMLElement {
+    cleanup?: () => void;
+    connectedCallback() {
+      const details = this.querySelector('details')!;
+      const summary = this.querySelector('summary')!;
+      const select = this.querySelector('select')!;
+      const buttons = [...this.querySelectorAll<HTMLButtonElement>('[data-theme-choice]')];
+      const controller = new AbortController();
+      const options = { signal: controller.signal };
+      const close = () => { details.open = false; };
+      const sync = () => {
+        const value = select.value || 'auto';
+        for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.themeChoice === value));
+        for (const icon of this.querySelectorAll<HTMLElement>('[data-theme-icon]')) icon.hidden = icon.dataset.themeIcon !== value;
+        const text = buttons.find(button => button.dataset.themeChoice === value)?.querySelector('span')?.textContent || '';
+        this.querySelector('.wiki-theme-label')!.textContent = text;
+        summary.setAttribute('aria-label', `${summary.dataset.label}: ${text}`);
+      };
+      this.addEventListener('click', async event => {
+        const button = (event.target as Element).closest<HTMLButtonElement>('[data-theme-choice]');
+        if (!button) return;
+        await customElements.whenDefined('starlight-theme-select');
+        select.value = button.dataset.themeChoice!;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        close();
+        summary.focus();
+      }, options);
+      document.addEventListener('click', event => { if (!this.contains(event.target as Node)) close(); }, options);
+      document.addEventListener('focusin', event => { if (!this.contains(event.target as Node)) close(); }, options);
+      this.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && details.open) { event.preventDefault(); event.stopPropagation(); close(); summary.focus(); }
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          details.open = true;
+          const current = buttons.indexOf(document.activeElement as HTMLButtonElement);
+          const down = event.key === 'ArrowDown';
+          buttons[current < 0 ? (down ? 0 : buttons.length - 1) : (current + (down ? 1 : buttons.length - 1)) % buttons.length].focus();
+        }
+      }, options);
+      const observer = new MutationObserver(sync);
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      sync();
+      void customElements.whenDefined('starlight-theme-select').then(() => { if (this.isConnected) sync(); });
+      this.cleanup = () => { controller.abort(); observer.disconnect(); };
+    }
+    disconnectedCallback() { this.cleanup?.(); }
+  }
+  customElements.define('wiki-theme-menu', WikiThemeMenu);
+</script>

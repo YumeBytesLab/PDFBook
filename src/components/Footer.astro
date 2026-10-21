@@ -1,0 +1,18 @@
+---
+import Pagination from '@astrojs/starlight/components/Pagination.astro';
+import { docPath, localeFromRoute, productPath, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const text = ui[locale];
+const isHome = Astro.locals.starlightRoute.entry.data.template === 'splash';
+---
+<footer class:list={['wiki-footer', { 'wiki-footer-home': isHome }]}>
+  {!isHome && <Pagination />}
+  <section class="wiki-support">
+    <div><h2>{text.support}</h2><p>{text.supportText}</p></div>
+    <div><a href={docPath(locale, 'faq')}>{text.faq}</a><a href={`https://pdfbook.app${locale === 'ja' ? '/ja' : ''}/contact`}>{text.contact}</a></div>
+  </section>
+  <div class="wiki-footer-bottom">
+    <a class="wiki-brand" href={productPath(locale)}><img src="/images/app-icon.png" alt="" width="24" height="24" /><span>PDFBook</span></a>
+    <span>© YumeBytes</span><a href="https://github.com/YumeBytesLab/PDFBook">GitHub</a>
+  </div>
+</footer>

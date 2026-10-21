@@ -1,0 +1,53 @@
+@import './layout.css';
+@import './home.css';
+@import './article.css';
+@import './search.css';
+@import './theme-menu.css';
+
+/* Neutral surfaces keep the application screenshots and the reading content central. */
+:root {
+  --sl-font: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Microsoft YaHei', 'Malgun Gothic', sans-serif;
+  --wiki-font-display: Georgia, 'Times New Roman', serif;
+  --wiki-display-leading: 1.2;
+  --wiki-display-tracking: -.04em;
+  --sl-color-white: #f5f5f5; --sl-color-gray-1: #e5e5e5; --sl-color-gray-2: #c7c7c7;
+  --sl-color-gray-3: #999; --sl-color-gray-4: #737373; --sl-color-gray-5: #363636;
+  --sl-color-gray-6: #242424; --sl-color-black: #111;
+  --sl-color-accent-low: #242424; --sl-color-accent: #c7c7c7; --sl-color-accent-high: #f5f5f5;
+  --sl-color-bg: #111; --sl-color-bg-nav: #171717; --sl-color-bg-sidebar: #111;
+  --sl-color-hairline-shade: #333; --sl-color-hairline-light: #333;
+  --sl-content-width: 47rem; --sl-sidebar-width: 17rem; --sl-nav-height: 6rem;
+  --sl-text-h1: clamp(2.2rem, 3.8vw, 3.4rem); --sl-line-height: 1.8;
+  --wiki-ink: #f5f5f5; --wiki-muted: #aaa; --wiki-link: #e5e5e5;
+  --wiki-action: #f5f5f5; --wiki-action-hover: #d7d7d7; --wiki-on-action: #111;
+  --wiki-surface: #171717; --wiki-line: #333; --wiki-paper: #1c1c1c; --wiki-header: #171717;
+}
+:root[data-theme='light'] {
+  --sl-color-white: #171717; --sl-color-gray-1: #292929; --sl-color-gray-2: #444;
+  --sl-color-gray-3: #666; --sl-color-gray-4: #888; --sl-color-gray-5: #ddd;
+  --sl-color-gray-6: #f0f0f0; --sl-color-gray-7: #f6f6f6; --sl-color-black: #fff;
+  --sl-color-accent-low: #f0f0f0; --sl-color-accent: #333; --sl-color-accent-high: #171717;
+  --sl-color-bg: #fff; --sl-color-bg-nav: #fff; --sl-color-bg-sidebar: #fff;
+  --sl-color-hairline-shade: #e5e5e5; --sl-color-hairline-light: #e5e5e5;
+  --wiki-ink: #171717; --wiki-muted: #666; --wiki-link: #222;
+  --wiki-action: #171717; --wiki-action-hover: #363636; --wiki-on-action: #fff;
+  --wiki-surface: #fff; --wiki-line: #e1e1e1; --wiki-paper: #f6f6f6; --wiki-header: #fff;
+}
+:root:lang(ja) { --wiki-font-display: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; }
+:root:lang(zh-CN) { --wiki-font-display: 'Songti SC', 'Noto Serif CJK SC', SimSun, serif; }
+:root:lang(ko) { --wiki-font-display: Batang, 'Noto Serif CJK KR', serif; }
+:root:is(:lang(ja), :lang(zh-CN), :lang(ko)) { --wiki-display-leading: 1.5; --wiki-display-tracking: -.025em; }
+body { font-kerning: normal; -webkit-font-smoothing: antialiased; }
+/* Hide scrollbar chrome without changing overflow or scroll interaction. */
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+a { color: var(--wiki-link); }
+::selection { background: var(--wiki-ink); color: var(--wiki-surface); }
+:focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 3px; }
+img { max-width: 100%; }
+.wiki-button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 12px 19px; min-height: 44px; border-radius: 11px; background: var(--wiki-action); color: var(--wiki-on-action) !important; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.45; transition: background 150ms ease, transform 120ms ease; }
+.wiki-button:active { transform: scale(.98); }
+.wiki-button-secondary { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: none; font-size: 15px; font-weight: 500; }
+@media (hover: hover) and (pointer: fine) { .wiki-button:hover { background: var(--wiki-action-hover); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+@media (prefers-reduced-transparency: reduce) { :root { --wiki-header: var(--sl-color-bg-nav); } }

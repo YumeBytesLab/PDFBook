@@ -1,0 +1,24 @@
+site-search dialog { background: var(--wiki-surface); border-color: var(--wiki-line); }
+site-search dialog::backdrop { background: rgb(0 0 0 / 66%); }
+:root[data-theme='light'] site-search dialog::backdrop { background: rgb(92 92 92 / 66%); }
+#starlight__search {
+  --pagefind-ui-background: var(--sl-color-bg);
+  --pagefind-ui-border: var(--wiki-line);
+  --pagefind-ui-border-radius: 8px;
+}
+#starlight__search .pagefind-ui__search-input { font-size: 16px; }
+#starlight__search .pagefind-ui__search-input::placeholder { color: var(--wiki-muted); opacity: 1; }
+/* Keep the focus stroke on the field, instead of drawing a second frame outside it. */
+#starlight__search .pagefind-ui__search-input:focus { border-color: var(--wiki-ink); outline: 2px solid var(--wiki-ink); outline-offset: -2px; box-shadow: none; }
+#starlight__search .pagefind-ui__search-clear:focus-visible { outline: 2px solid var(--wiki-link); outline-offset: -4px; }
+#starlight__search :is(.pagefind-ui__result-title, .pagefind-ui__result-nested):focus-within { outline: 2px solid var(--wiki-link); outline-offset: -2px; }
+/* The result wrapper supplies the visible keyboard focus for its full clickable area. */
+#starlight__search .pagefind-ui__result-link:focus-visible { outline: none; }
+@media (min-width: 50rem) { site-search dialog { border-radius: 12px; } }
+@media (max-width: 49.99rem) {
+  /* Give translated cancel labels their own row rather than a fixed-width slot in the field. */
+  site-search .dialog-frame { gap: 12px; }
+  site-search button[data-close-modal] { position: static; height: auto; min-height: 36px; padding-inline: 8px; border-radius: 6px; }
+  site-search button[data-close-modal]:focus-visible { outline-offset: -2px; }
+  #starlight__search { --sl-search-cancel-space: 0px; }
+}

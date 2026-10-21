@@ -1,0 +1,12 @@
+{
+  "pagefind.clear_search": "Очистить",
+  "pagefind.load_more": "Показать ещё результаты",
+  "pagefind.search_label": "Поиск по руководствам",
+  "pagefind.filters_label": "Фильтры",
+  "pagefind.zero_results": "По запросу [SEARCH_TERM] ничего не найдено",
+  "pagefind.many_results": "Результаты по запросу [SEARCH_TERM]: [COUNT]",
+  "pagefind.one_result": "Результаты по запросу [SEARCH_TERM]: [COUNT]",
+  "pagefind.alt_search": "По запросу [SEARCH_TERM] ничего не найдено. Показаны результаты для [DIFFERENT_TERM].",
+  "pagefind.search_suggestion": "По запросу [SEARCH_TERM] ничего не найдено. Попробуйте один из следующих запросов:",
+  "pagefind.searching": "Поиск по запросу [SEARCH_TERM]…"
+}

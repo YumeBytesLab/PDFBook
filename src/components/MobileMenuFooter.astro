@@ -1,0 +1,7 @@
+---
+import ThemeSelect from './ThemeSelect.astro';
+import { localeFromRoute, productPath, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+---
+<a class="wiki-mobile-website" href={productPath(locale)}>{ui[locale].website}</a>
+<div class="wiki-mobile-theme"><ThemeSelect /></div>

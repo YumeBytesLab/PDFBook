@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import { Icon } from '@astrojs/starlight/components';
+import { docPath, groups, localeFromRoute, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const text = ui[locale];
+const entries = await getCollection('docs');
+const entryFor = (slug: string) => entries.find(entry => entry.id === `${locale === 'en' ? '' : `${locale}/`}${slug}`);
+---
+<div class="wiki-home">
+  <ol class="wiki-journey">
+    {text.steps.map((step: string, i: number) => (
+      <li><span>{i + 1}</span><a href={docPath(locale, i === 0 ? 'download' : i === 1 ? 'getting-started' : 'features/reader')}>{step}</a></li>
+    ))}
+  </ol>
+  <section class="wiki-directory" aria-labelledby="guide-directory">
+    <header><h2 id="guide-directory">{text.browse}</h2><p>{text.browseIntro}</p></header>
+    <div class="wiki-guide-groups">
+      {groups.map((items, index) => (
+        <section class="wiki-guide-group">
+          <h3>{text.groupNames[index]}</h3>
+          <ul>
+            {items.map(slug => { const entry = entryFor(slug); return entry && (
+              <li><a href={docPath(locale, slug)}><span><strong>{entry.data.title}</strong><span>{entry.data.description}</span></span><Icon name="right-arrow" size="20" /></a></li>
+            ); })}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+  <section class="wiki-local-reading">
+    <div><h2>{text.privacy}</h2><p>{text.privacyText}</p><a href={docPath(locale, 'privacy')}>{text.nav[9]} <Icon name="right-arrow" size="18" /></a></div>
+    <img src={`/images/library-${locale === 'ja' ? 'ja' : 'en'}.webp`} alt={text.libraryShot} loading="lazy" width="1920" height="1200" />
+  </section>
+</div>

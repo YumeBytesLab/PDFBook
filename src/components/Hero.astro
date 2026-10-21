@@ -1,0 +1,19 @@
+---
+import { docPath, localeFromRoute, ui } from '../i18n/site.mjs';
+const locale = localeFromRoute(Astro.locals.starlightRoute.locale);
+const text = ui[locale];
+---
+<section class="wiki-hero">
+  <div class="wiki-hero-copy">
+    <p class="wiki-hero-label">PDFBook · {text.guide}</p>
+    <h1 id="_top" data-page-title>{text.homeTitle}</h1>
+    <p class="wiki-hero-intro">{text.homeIntro}</p>
+    <div class="wiki-hero-actions">
+      <a class="wiki-button" href={docPath(locale, 'getting-started')}>{text.start}</a>
+      <a class="wiki-button-secondary" href={docPath(locale, 'download')}>{text.download}</a>
+    </div>
+  </div>
+  <div class="wiki-hero-product">
+    <img src={`/images/reader-${locale === 'ja' ? 'ja' : 'en'}.webp`} alt={text.shot} width="1920" height="1200" fetchpriority="high" />
+  </div>
+</section>
