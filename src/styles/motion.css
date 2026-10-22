@@ -7,28 +7,18 @@
   view-transition-name: none;
 }
 
-/* Keep full-document navigation and its native history, search and focus behavior. */
+/* Keep document navigation native and reading content stationary; only crossfade its snapshots. */
 .main-pane { view-transition-name: wiki-page; }
 :root[data-wiki-input='pointer'] { scroll-behavior: smooth; }
 ::view-transition { pointer-events: none; }
 ::view-transition-group(*) { animation-duration: var(--wiki-motion-page); animation-timing-function: var(--wiki-ease-out); }
 ::view-transition-group(wiki-page) { animation: none; }
 ::view-transition-old(wiki-page) { animation: wiki-fade-out var(--wiki-motion-fast) ease both; }
-::view-transition-new(wiki-page) { animation: wiki-appear var(--wiki-motion-page) var(--wiki-ease-out) both; }
+::view-transition-new(wiki-page) { animation: wiki-fade-in var(--wiki-motion-page) ease both; }
 :root[data-wiki-theme-transition] { view-transition-name: root; }
 :root[data-wiki-theme-transition] .main-pane { view-transition-name: none; }
 :root[data-wiki-theme-transition]::view-transition-old(root) { animation: wiki-fade-out var(--wiki-motion-panel) ease both; }
 :root[data-wiki-theme-transition]::view-transition-new(root) { animation: wiki-fade-in var(--wiki-motion-panel) ease both; }
-
-.wiki-article-heading, .content-panel + .content-panel,
-.wiki-hero-copy > *, .wiki-hero-product {
-  animation: wiki-appear var(--wiki-motion-page) var(--wiki-ease-out) backwards;
-}
-.content-panel + .content-panel, .wiki-hero-copy > :nth-child(2) { animation-delay: 40ms; }
-.wiki-hero-copy > :nth-child(3), .wiki-hero-product { animation-delay: 60ms; }
-.wiki-hero-copy > :nth-child(4) { animation-delay: 60ms; }
-/* The navigation snapshot supplies the entrance; don't animate its contents twice. */
-:root:active-view-transition :is(.wiki-article-heading, .content-panel, .wiki-hero-copy > *, .wiki-hero-product) { animation: none; }
 
 :is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)::details-content {
   transition: content-visibility var(--wiki-motion-panel) allow-discrete;
@@ -110,7 +100,6 @@ site-search dialog[open]::backdrop { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
-  .wiki-article-heading, .content-panel + .content-panel, .wiki-hero-copy > *, .wiki-hero-product { animation: wiki-fade-in 80ms ease backwards; }
   :is(.wiki-theme-panel, .wiki-language-panel, #starlight__mobile-toc .dropdown, site-search dialog, .sidebar-pane) { transform: none !important; transition-duration: 80ms; }
   .sidebar-content .top-level details::details-content { transition: none; }
   :is(.wiki-button, .wiki-guide-group li svg, .wiki-footer .pagination-links a svg, wiki-menu-button button svg, .wiki-language summary > svg:last-child, #starlight__mobile-toc .caret, .sidebar-content summary .caret) { transition: none; }
@@ -121,6 +110,5 @@ site-search dialog[open]::backdrop { opacity: 1; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-@keyframes wiki-appear { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @keyframes wiki-fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes wiki-fade-out { from { opacity: 1; } to { opacity: 0; } }

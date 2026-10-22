@@ -3,6 +3,12 @@ async (page) => {
   const origin = 'http://127.0.0.1:4396';
   const browser = page.context().browser(), results = [];
   const check = (value, message) => { if (!value) throw Error(message); };
+  const checkTextStill = async p => {
+    check(await p.evaluate(() => [...document.querySelectorAll('.wiki-article-heading, .content-panel, .wiki-hero-copy > *, .wiki-hero-product')].every(el => {
+      const style = getComputedStyle(el);
+      return style.animationName === 'none' && style.transform === 'none' && style.opacity === '1';
+    })), 'Reading content must stay visible and stationary, including after a transition ends');
+  };
   for (const reducedMotion of ['no-preference', 'reduce']) {
     const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, colorScheme: 'dark', reducedMotion });
     const p = await context.newPage(), errors = [];
@@ -13,6 +19,7 @@ async (page) => {
       });
       await p.goto(origin + '/ja/settings/');
       await p.evaluate(() => customElements.whenDefined('wiki-theme-menu'));
+      await checkTextStill(p);
       const menu = p.locator('.wiki-header wiki-theme-menu');
       await menu.locator('summary').click();
       check(await menu.locator('.wiki-theme-panel').evaluate(el => !el.inert), 'Open theme menu is interactive');
@@ -24,6 +31,7 @@ async (page) => {
       await menu.locator('[data-theme-choice="light"]').click();
       await p.waitForFunction(() => document.documentElement.dataset.theme === 'light');
       await p.waitForFunction(() => !document.documentElement.hasAttribute('data-wiki-theme-transition'));
+      await checkTextStill(p);
       check(await menu.locator('.wiki-theme-panel').evaluate(el => el.inert && el.getAttribute('aria-hidden') === 'true'), 'Closed menu leaves accessibility and focus trees');
       check(await p.evaluate(() => localStorage.getItem('starlight-theme')) === 'light', 'Animated theme choice persists');
 
@@ -73,6 +81,8 @@ async (page) => {
       await p.waitForSelector('#starlight__search input', { state: 'attached' });
       if (reducedMotion === 'no-preference') check(await p.evaluate(() => sessionStorage.getItem('wiki-test-page-transition')) === 'true', 'Navigation uses a real cross-document transition');
       else check(await p.evaluate(() => sessionStorage.getItem('wiki-test-page-transition')) === 'false', 'Reduced motion opts out of cross-document animation');
+      await p.evaluate(async () => { await document.activeViewTransition?.finished; });
+      await checkTextStill(p);
       await menu.locator('summary').click();
       await menu.locator('.wiki-theme-panel').waitFor({ state: 'visible' });
       await p.keyboard.press('Escape');
@@ -119,7 +129,7 @@ async (page) => {
       check(await toc.locator('.dropdown').evaluate(el => el.inert), 'Mobile contents leave focus tree after selection');
       check(!await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), 'No horizontal overflow');
       check(errors.length === 0, errors.join('; '));
-      results.push({ reducedMotion, themes: true, interruption: true, keyboard: true, search: true, navigation: true, mobile: true, pageErrors: 0 });
+      results.push({ reducedMotion, stationaryText: true, themes: true, interruption: true, keyboard: true, search: true, navigation: true, mobile: true, pageErrors: 0 });
     } catch (error) { throw Error(`${reducedMotion}: ${error.message}`); }
     finally { await context.close(); }
   }
@@ -139,6 +149,7 @@ async (page) => {
   try {
     const p = await noScript.newPage();
     await p.goto(origin + '/ja/');
+    await checkTextStill(p);
     await p.locator('.wiki-language summary').click();
     // Poll from the host: browser rAF callbacks do not run when JavaScript is disabled.
     for (let attempt = 0; attempt < 20; attempt++) {
