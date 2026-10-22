@@ -26,6 +26,8 @@ const choices = [
   </details>
 </wiki-theme-menu>
 <script>
+  import { setDetailsOpen, switchTheme } from '../scripts/motion';
+
   class WikiThemeMenu extends HTMLElement {
     cleanup?: () => void;
     connectedCallback() {
@@ -35,7 +37,7 @@ const choices = [
       const buttons = [...this.querySelectorAll<HTMLButtonElement>('[data-theme-choice]')];
       const controller = new AbortController();
       const options = { signal: controller.signal };
-      const close = () => { details.open = false; };
+      const close = () => setDetailsOpen(details, false);
       const sync = () => {
         const value = select.value || 'auto';
         for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.themeChoice === value));
@@ -48,10 +50,9 @@ const choices = [
         const button = (event.target as Element).closest<HTMLButtonElement>('[data-theme-choice]');
         if (!button) return;
         await customElements.whenDefined('starlight-theme-select');
-        select.value = button.dataset.themeChoice!;
-        select.dispatchEvent(new Event('change', { bubbles: true }));
         close();
         summary.focus();
+        switchTheme(select, button.dataset.themeChoice!);
       }, options);
       document.addEventListener('click', event => { if (!this.contains(event.target as Node)) close(); }, options);
       document.addEventListener('focusin', event => { if (!this.contains(event.target as Node)) close(); }, options);
@@ -59,7 +60,7 @@ const choices = [
         if (event.key === 'Escape' && details.open) { event.preventDefault(); event.stopPropagation(); close(); summary.focus(); }
         if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
           event.preventDefault();
-          details.open = true;
+          setDetailsOpen(details, true);
           const current = buttons.indexOf(document.activeElement as HTMLButtonElement);
           const down = event.key === 'ArrowDown';
           buttons[current < 0 ? (down ? 0 : buttons.length - 1) : (current + (down ? 1 : buttons.length - 1)) % buttons.length].focus();

@@ -9,6 +9,8 @@ export default defineConfig({
     title: 'PDFBook', description: 'PDFBook guides for reading, organizing and working with PDFs.',
     favicon: '/images/app-icon.png', credits: false,
     head: [
+      // Opt in before first paint; external CSS can arrive after the incoming transition is resolved.
+      { tag: 'style', content: '@view-transition { navigation: auto; } @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }' },
       { tag: 'meta', attrs: { name: 'robots', content: 'index,follow,max-image-preview:large' } },
       { tag: 'meta', attrs: { property: 'og:image', content: 'https://wiki.pdfbook.app/images/library-en.webp' } },
       { tag: 'meta', attrs: { property: 'og:image:width', content: '1920' } },

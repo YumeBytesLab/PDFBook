@@ -25,7 +25,7 @@ html[data-has-hero] .content-panel { border: 0; }
 .wiki-guide-group li a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 19px 0; text-decoration: none; color: var(--wiki-ink); }
 .wiki-guide-group strong { display: block; font-size: 17px; font-weight: 550; line-height: 1.6; }
 .wiki-guide-group li a > span > span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 5px; color: var(--wiki-muted); font-size: 14px; line-height: 1.7; }
-.wiki-guide-group li svg { flex-shrink: 0; color: var(--wiki-muted); transition: transform 150ms ease; }
+.wiki-guide-group li svg { flex-shrink: 0; color: var(--wiki-muted); }
 .wiki-local-reading { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 44px; padding: 40px; border: 1px solid var(--wiki-line); border-radius: 22px; background: var(--wiki-paper); }
 .wiki-local-reading h2 { font-size: clamp(25px, 2.5vw, 35px); }
 .wiki-local-reading p { margin-top: 16px; color: var(--wiki-muted); font-size: 15px; line-height: 1.8; }

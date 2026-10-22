@@ -1,0 +1,126 @@
+:root {
+  --wiki-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --wiki-ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --wiki-motion-fast: 140ms;
+  --wiki-motion-panel: 180ms;
+  --wiki-motion-page: 240ms;
+  view-transition-name: none;
+}
+
+/* Keep full-document navigation and its native history, search and focus behavior. */
+.main-pane { view-transition-name: wiki-page; }
+:root[data-wiki-input='pointer'] { scroll-behavior: smooth; }
+::view-transition { pointer-events: none; }
+::view-transition-group(*) { animation-duration: var(--wiki-motion-page); animation-timing-function: var(--wiki-ease-out); }
+::view-transition-group(wiki-page) { animation: none; }
+::view-transition-old(wiki-page) { animation: wiki-fade-out var(--wiki-motion-fast) ease both; }
+::view-transition-new(wiki-page) { animation: wiki-appear var(--wiki-motion-page) var(--wiki-ease-out) both; }
+:root[data-wiki-theme-transition] { view-transition-name: root; }
+:root[data-wiki-theme-transition] .main-pane { view-transition-name: none; }
+:root[data-wiki-theme-transition]::view-transition-old(root) { animation: wiki-fade-out var(--wiki-motion-panel) ease both; }
+:root[data-wiki-theme-transition]::view-transition-new(root) { animation: wiki-fade-in var(--wiki-motion-panel) ease both; }
+
+.wiki-article-heading, .content-panel + .content-panel,
+.wiki-hero-copy > *, .wiki-hero-product {
+  animation: wiki-appear var(--wiki-motion-page) var(--wiki-ease-out) backwards;
+}
+.content-panel + .content-panel, .wiki-hero-copy > :nth-child(2) { animation-delay: 40ms; }
+.wiki-hero-copy > :nth-child(3), .wiki-hero-product { animation-delay: 60ms; }
+.wiki-hero-copy > :nth-child(4) { animation-delay: 60ms; }
+/* The navigation snapshot supplies the entrance; don't animate its contents twice. */
+:root:active-view-transition :is(.wiki-article-heading, .content-panel, .wiki-hero-copy > *, .wiki-hero-product) { animation: none; }
+
+:is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)::details-content {
+  transition: content-visibility var(--wiki-motion-panel) allow-discrete;
+}
+.wiki-theme-panel, .wiki-language-panel, #starlight__mobile-toc .dropdown {
+  opacity: 0;
+  transform: translateY(-6px) scale(.98);
+  transform-origin: top right;
+  transition: opacity var(--wiki-motion-panel) var(--wiki-ease-out), transform var(--wiki-motion-panel) var(--wiki-ease-out);
+}
+.wiki-mobile-theme .wiki-theme-panel { transform-origin: bottom left; transform: translateY(6px) scale(.98); }
+#starlight__mobile-toc .dropdown { transform-origin: top left; }
+:is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)[open] > :is(.wiki-theme-panel, .wiki-language-panel, .dropdown) {
+  opacity: 1;
+  transform: none;
+}
+@starting-style {
+  :is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)[open] > :is(.wiki-theme-panel, .wiki-language-panel, .dropdown) { opacity: 0; transform: translateY(-6px) scale(.98); }
+  .wiki-mobile-theme .wiki-theme-details[open] > .wiki-theme-panel { transform: translateY(6px) scale(.98); }
+}
+.wiki-language summary > svg:last-child, #starlight__mobile-toc .caret, .sidebar-content summary .caret { transition: transform var(--wiki-motion-panel) var(--wiki-ease-out); }
+.wiki-language[open] summary > svg:last-child { transform: rotate(180deg); }
+
+@supports (interpolate-size: allow-keywords) {
+  .sidebar-content .top-level details::details-content {
+    interpolate-size: allow-keywords;
+    block-size: 0;
+    opacity: 0;
+    overflow: clip;
+    transition: block-size var(--wiki-motion-panel) var(--wiki-ease-out), opacity var(--wiki-motion-panel) ease, content-visibility var(--wiki-motion-panel) allow-discrete;
+  }
+  .sidebar-content .top-level details[open]::details-content { block-size: auto; opacity: 1; }
+}
+
+site-search dialog {
+  opacity: 0;
+  transform: translateY(8px) scale(.98);
+  transition: opacity var(--wiki-motion-panel) var(--wiki-ease-out), transform var(--wiki-motion-panel) var(--wiki-ease-out), display var(--wiki-motion-panel) allow-discrete, overlay var(--wiki-motion-panel) allow-discrete;
+}
+site-search dialog[open] { opacity: 1; transform: none; }
+site-search dialog:not([open]), site-search dialog:not([open])::backdrop { pointer-events: none; }
+site-search dialog::backdrop { opacity: 0; transition: opacity var(--wiki-motion-panel) ease, display var(--wiki-motion-panel) allow-discrete, overlay var(--wiki-motion-panel) allow-discrete; }
+site-search dialog[open]::backdrop { opacity: 1; }
+@starting-style {
+  site-search dialog[open] { opacity: 0; transform: translateY(8px) scale(.98); }
+  site-search dialog[open]::backdrop { opacity: 0; }
+}
+
+.wiki-button { transition: background-color var(--wiki-motion-fast) ease, transform var(--wiki-motion-fast) var(--wiki-ease-out); }
+:is(.wiki-language, .wiki-theme-details) summary,
+:is(.wiki-theme-panel button, .wiki-language-panel a, .sidebar-content a, .right-sidebar a, .wiki-footer .pagination-links a, .wiki-header site-search button[data-open-modal], .wiki-button-secondary, .wiki-website, .wiki-support a) {
+  transition: color var(--wiki-motion-fast) ease, background-color var(--wiki-motion-fast) ease, border-color var(--wiki-motion-fast) ease;
+}
+.wiki-guide-group li svg, .wiki-footer .pagination-links a svg { transition: transform var(--wiki-motion-fast) var(--wiki-ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .wiki-footer .pagination-links a:hover svg { transform: translateX(3px); }
+  .wiki-footer .pagination-links a[rel='prev']:hover svg { transform: translateX(-3px); }
+}
+
+@media (max-width: 49.99rem) {
+  .sidebar-pane {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity var(--wiki-motion-page) var(--wiki-ease-out), transform var(--wiki-motion-page) var(--wiki-ease-drawer), visibility var(--wiki-motion-page) allow-discrete;
+  }
+  body[data-mobile-menu-expanded] .sidebar-pane { visibility: visible; opacity: 1; transform: none; }
+  wiki-menu-button button svg { position: absolute; transition: opacity var(--wiki-motion-fast) ease, transform var(--wiki-motion-panel) var(--wiki-ease-out); }
+  wiki-menu-button[aria-expanded] :is(.open-menu, .close-menu) { display: block; }
+  wiki-menu-button[aria-expanded='false'] .close-menu { opacity: 0; transform: rotate(-45deg) scale(.85); }
+  wiki-menu-button[aria-expanded='true'] .open-menu { opacity: 0; transform: rotate(45deg) scale(.85); }
+}
+
+/* Frequent keyboard actions stay immediate. Closed panels still become inert synchronously. */
+:root[data-wiki-input='keyboard'] :is(.wiki-theme-panel, .wiki-language-panel, #starlight__mobile-toc .dropdown, site-search dialog, .sidebar-pane, wiki-menu-button button svg),
+:root[data-wiki-input='keyboard'] :is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc, .sidebar-content .top-level details)::details-content,
+:root[data-wiki-input='keyboard'] site-search dialog::backdrop,
+:root[data-wiki-theme-transition] :is(.wiki-theme-panel, .wiki-language-panel) { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+  .wiki-article-heading, .content-panel + .content-panel, .wiki-hero-copy > *, .wiki-hero-product { animation: wiki-fade-in 80ms ease backwards; }
+  :is(.wiki-theme-panel, .wiki-language-panel, #starlight__mobile-toc .dropdown, site-search dialog, .sidebar-pane) { transform: none !important; transition-duration: 80ms; }
+  .sidebar-content .top-level details::details-content { transition: none; }
+  :is(.wiki-button, .wiki-guide-group li svg, .wiki-footer .pagination-links a svg, wiki-menu-button button svg, .wiki-language summary > svg:last-child, #starlight__mobile-toc .caret, .sidebar-content summary .caret) { transition: none; }
+  .wiki-button:active, .wiki-guide-group a:hover svg, .wiki-footer .pagination-links a:hover svg { transform: none; }
+}
+
+@media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@keyframes wiki-appear { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes wiki-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes wiki-fade-out { from { opacity: 1; } to { opacity: 0; } }

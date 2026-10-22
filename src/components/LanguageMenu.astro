@@ -21,11 +21,13 @@ const slug = slugs.includes(candidate) ? candidate : '';
   </details>
 </wiki-language-menu>
 <script>
+  import { setDetailsOpen } from '../scripts/motion';
+
   class WikiLanguageMenu extends HTMLElement {
     connectedCallback() {
       const details = this.querySelector('details')!;
       const summary = this.querySelector('summary')!;
-      const close = () => { details.open = false; };
+      const close = () => setDetailsOpen(details, false);
       document.addEventListener('click', event => { if (!this.contains(event.target as Node)) close(); });
       document.addEventListener('focusin', event => { if (!this.contains(event.target as Node)) close(); });
       this.addEventListener('keydown', event => { if (event.key === 'Escape' && details.open) { close(); summary.focus(); } });

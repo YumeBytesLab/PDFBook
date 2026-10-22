@@ -3,6 +3,7 @@
 @import './article.css';
 @import './search.css';
 @import './theme-menu.css';
+@import './motion.css';
 
 /* Neutral surfaces keep the application screenshots and the reading content central. */
 :root {
@@ -45,9 +46,8 @@ a { color: var(--wiki-link); }
 ::selection { background: var(--wiki-ink); color: var(--wiki-surface); }
 :focus-visible { outline: 2px solid var(--wiki-link); outline-offset: 3px; }
 img { max-width: 100%; }
-.wiki-button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 12px 19px; min-height: 44px; border-radius: 11px; background: var(--wiki-action); color: var(--wiki-on-action) !important; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.45; transition: background 150ms ease, transform 120ms ease; }
+.wiki-button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 12px 19px; min-height: 44px; border-radius: 11px; background: var(--wiki-action); color: var(--wiki-on-action) !important; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.45; }
 .wiki-button:active { transform: scale(.98); }
 .wiki-button-secondary { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: none; font-size: 15px; font-weight: 500; }
 @media (hover: hover) and (pointer: fine) { .wiki-button:hover { background: var(--wiki-action-hover); } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 @media (prefers-reduced-transparency: reduce) { :root { --wiki-header: var(--sl-color-bg-nav); } }
