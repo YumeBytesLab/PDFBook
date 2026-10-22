@@ -33,7 +33,7 @@ wiki-menu-button button svg { width: 20px; height: 20px; }
 @media (max-width: 49.99rem) {
   :root { --sl-nav-height: 5rem; }
   .page > .header { inset: 12px 12px auto; width: calc(100% - 24px); height: 56px; padding: 8px 11px; border-radius: 10px; }
-  [data-has-sidebar] .page > .header { padding-inline-end: 47px; }
+  .page > .header { padding-inline-end: 47px; }
   .wiki-header { gap: 8px; }
   .wiki-brand { gap: 5px; font-size: 16px; }
   .wiki-brand img { width: 26px; height: 26px; }
@@ -42,7 +42,6 @@ wiki-menu-button button svg { width: 20px; height: 20px; }
   .wiki-header .wiki-header-download, .wiki-language summary > span, .wiki-language summary > svg:last-child { display: none; }
   .wiki-language summary { justify-content: center; width: 32px; padding-inline: 4px; }
   .wiki-language-panel { right: -30px; top: calc(100% + 15px); max-height: calc(100dvh - 96px); }
-  html:not([data-has-sidebar]) .wiki-language-panel { right: 0; }
   .wiki-theme { display: none; }
   wiki-menu-button button { top: 24px; right: 23px; }
   .sidebar-pane { padding-top: 8px; padding-bottom: 32px; }

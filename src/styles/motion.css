@@ -4,21 +4,31 @@
   --wiki-motion-fast: 140ms;
   --wiki-motion-panel: 180ms;
   --wiki-motion-page: 240ms;
-  view-transition-name: none;
+  view-transition-name: root;
 }
 
-/* Keep document navigation native and reading content stationary; only crossfade its snapshots. */
+/* Only incoming reading content fades. Shared chrome never morphs or crossfades. */
 .main-pane { view-transition-name: wiki-page; }
+.page > .header { view-transition-name: wiki-header; }
+wiki-menu-button button { view-transition-name: wiki-menu-toggle; }
+@media (min-width: 50rem) { .sidebar-pane { view-transition-name: wiki-sidebar; } }
+@media (min-width: 72rem) { .right-sidebar { view-transition-name: wiki-toc; } }
+@media (max-width: 71.99rem) { mobile-starlight-toc nav { view-transition-name: wiki-toc; } }
 :root[data-wiki-input='pointer'] { scroll-behavior: smooth; }
 ::view-transition { pointer-events: none; }
-::view-transition-group(*) { animation-duration: var(--wiki-motion-page); animation-timing-function: var(--wiki-ease-out); }
-::view-transition-group(wiki-page) { animation: none; }
-::view-transition-old(wiki-page) { animation: wiki-fade-out var(--wiki-motion-fast) ease both; }
-::view-transition-new(wiki-page) { animation: wiki-fade-in var(--wiki-motion-page) ease both; }
-:root[data-wiki-theme-transition] { view-transition-name: root; }
-:root[data-wiki-theme-transition] .main-pane { view-transition-name: none; }
-:root[data-wiki-theme-transition]::view-transition-old(root) { animation: wiki-fade-out var(--wiki-motion-panel) ease both; }
-:root[data-wiki-theme-transition]::view-transition-new(root) { animation: wiki-fade-in var(--wiki-motion-panel) ease both; }
+::view-transition-group(*) { animation: none; }
+::view-transition-group(wiki-header), ::view-transition-group(wiki-menu-toggle) { z-index: 2; }
+/* An old content bitmap can stretch when the next article has different dimensions. */
+::view-transition-old(wiki-page), ::view-transition-old(root),
+::view-transition-old(wiki-header), ::view-transition-old(wiki-sidebar),
+::view-transition-old(wiki-toc), ::view-transition-old(wiki-menu-toggle) { display: none; }
+::view-transition-new(root), ::view-transition-new(wiki-header),
+::view-transition-new(wiki-sidebar), ::view-transition-new(wiki-toc),
+::view-transition-new(wiki-menu-toggle) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(wiki-page) { animation: wiki-fade-in var(--wiki-motion-fast) ease both; }
+:root[data-wiki-theme-transition] :is(.main-pane, .page > .header, .sidebar-pane, .right-sidebar, mobile-starlight-toc nav, wiki-menu-button button) { view-transition-name: none; }
+:root[data-wiki-theme-transition]::view-transition-old(root) { display: block; animation: wiki-fade-out var(--wiki-motion-panel) ease both; }
+:root[data-wiki-theme-transition]::view-transition-new(root) { animation: wiki-fade-in var(--wiki-motion-panel) ease both; mix-blend-mode: plus-lighter; }
 
 :is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)::details-content {
   transition: content-visibility var(--wiki-motion-panel) allow-discrete;
@@ -39,18 +49,21 @@
   :is(.wiki-theme-details, .wiki-language, #starlight__mobile-toc)[open] > :is(.wiki-theme-panel, .wiki-language-panel, .dropdown) { opacity: 0; transform: translateY(-6px) scale(.98); }
   .wiki-mobile-theme .wiki-theme-details[open] > .wiki-theme-panel { transform: translateY(6px) scale(.98); }
 }
-.wiki-language summary > svg:last-child, #starlight__mobile-toc .caret, .sidebar-content summary .caret { transition: transform var(--wiki-motion-panel) var(--wiki-ease-out); }
+.wiki-language summary > svg:last-child, #starlight__mobile-toc .caret { transition: transform var(--wiki-motion-panel) var(--wiki-ease-out); }
 .wiki-language[open] summary > svg:last-child { transform: rotate(180deg); }
 
 @supports (interpolate-size: allow-keywords) {
-  .sidebar-content .top-level details::details-content {
+  :root[data-wiki-input='pointer'] .sidebar-content .top-level details::details-content {
     interpolate-size: allow-keywords;
     block-size: 0;
     opacity: 0;
     overflow: clip;
     transition: block-size var(--wiki-motion-panel) var(--wiki-ease-out), opacity var(--wiki-motion-panel) ease, content-visibility var(--wiki-motion-panel) allow-discrete;
   }
-  .sidebar-content .top-level details[open]::details-content { block-size: auto; opacity: 1; }
+  :root[data-wiki-input='pointer'] .sidebar-content .top-level details[open]::details-content { block-size: auto; opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root[data-wiki-input='pointer'] .sidebar-content summary .caret { transition: transform var(--wiki-motion-panel) var(--wiki-ease-out); }
 }
 
 site-search dialog {
@@ -101,7 +114,7 @@ site-search dialog[open]::backdrop { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
   :is(.wiki-theme-panel, .wiki-language-panel, #starlight__mobile-toc .dropdown, site-search dialog, .sidebar-pane) { transform: none !important; transition-duration: 80ms; }
-  .sidebar-content .top-level details::details-content { transition: none; }
+  .sidebar-content .top-level details::details-content { transition: none !important; }
   :is(.wiki-button, .wiki-guide-group li svg, .wiki-footer .pagination-links a svg, wiki-menu-button button svg, .wiki-language summary > svg:last-child, #starlight__mobile-toc .caret, .sidebar-content summary .caret) { transition: none; }
   .wiki-button:active, .wiki-guide-group a:hover svg, .wiki-footer .pagination-links a:hover svg { transform: none; }
 }
