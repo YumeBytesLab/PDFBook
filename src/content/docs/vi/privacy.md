@@ -9,7 +9,25 @@ description: "Biết dữ liệu nào ở trên máy, yêu cầu AI đám mây c
 
 Đổi tên hoặc chuyển ngoài ứng dụng có thể làm hỏng đường dẫn. Giữ tệp và ổ ngoài truy cập được, đồng thời sao lưu riêng.
 
-## Sao lưu đầy đủ
+## Sao lưu và khôi phục
+
+Chuyển thư viện, cấu trúc thư mục, vị trí đọc, dấu trang, ảnh bìa và cài đặt hiển thị giữa các bản phân phối hoặc máy tính.
+
+1. **Cài đặt → Nâng cao → Sao lưu và khôi phục**
+2. **Bao gồm tệp gốc** — Sao chép tệp cục bộ trong thư viện. Sách trực tuyến giữ URL và không được tải xuống. Hãy kiểm tra tệp gốc bị thiếu trước khi xuất.
+3. **Xuất bản sao lưu** — Chọn nơi lưu để tạo thư mục sao lưu PDFBook. Giữ nguyên toàn bộ thư mục và chọn thư mục đó khi khôi phục.
+
+**Không kèm tệp gốc:** Không sao chép tệp gốc. Muốn đọc, tệp vẫn phải có ở vị trí ban đầu.
+
+**Nhập bản sao lưu → Kiểm tra bản sao lưu → Khôi phục và khởi động lại**
+
+> Tôi hiểu rằng thư viện và cài đặt hiển thị hiện tại sẽ bị thay thế và PDFBook khởi động lại. Các thư viện không được hợp nhất.
+
+Trước khi thay thế, bản sao dự phòng có thể nhập lại được lưu vào backups trong thư mục dữ liệu. Các tệp gốc hiện có không bị xóa. Hãy thêm lại các thư mục theo dõi sau khi khôi phục. Không chuyển quét tự động để tránh nhập trùng hoặc quét nhầm thư mục.
+
+Không bao gồm khóa API, cài đặt và lịch sử AI, mật khẩu PDF đã lưu và giấy phép. Cài đặt AI và giấy phép hiện tại được giữ nguyên.
+
+## Sao chép thủ công dữ liệu ứng dụng
 
 1. Mở **Cài đặt → Nâng cao → Mở thư mục dữ liệu người dùng**.
 2. Đóng PDFBook để dữ liệu không đổi trong lúc sao chép.

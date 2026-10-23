@@ -9,7 +9,25 @@ Leitura, biblioteca, criação, conversão e extração de imagens funcionam no 
 
 Mover ou renomear fora do app pode quebrar o caminho. Mantenha arquivos e unidades externas acessíveis e faça backup deles separadamente.
 
-## Backup completo
+## Backup e restauração
+
+Transfira biblioteca, pastas, posições de leitura, marcadores, capas e configurações de exibição entre edições ou computadores.
+
+1. **Configurações → Avançado → Backup e restauração**
+2. **Incluir arquivos originais** — Copia arquivos locais da biblioteca. Livros on-line mantêm suas URLs sem baixar o conteúdo. Confira os originais ausentes antes de exportar.
+3. **Exportar backup** — Escolha um destino para criar uma pasta de backup do PDFBook. Mantenha toda a pasta junta e selecione-a para restaurar.
+
+**Sem os arquivos originais:** Os originais não são copiados. Para ler, os arquivos ainda precisam estar nos locais originais.
+
+**Importar backup → Revisar backup → Restaurar e reiniciar**
+
+> Entendo que a biblioteca e as configurações de exibição atuais serão substituídas e o PDFBook reiniciará. As bibliotecas não serão mescladas.
+
+Antes da substituição, um backup importável é salvo em backups, na pasta de dados. Os originais existentes não são excluídos. Adicione novamente as pastas monitoradas após restaurar. A verificação automática não é transferida para evitar duplicatas ou examinar pastas indevidas.
+
+Chaves de API, configurações e histórico de IA, senhas de PDF salvas e licenças não são incluídos. As configurações de IA e a licença atuais são mantidas.
+
+## Cópia manual dos dados do aplicativo
 
 1. Abra **Configurações → Avançado → Abrir pasta de dados do usuário**.
 2. Feche o PDFBook para evitar alterações durante a cópia.

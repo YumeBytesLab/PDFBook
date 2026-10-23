@@ -19,6 +19,12 @@ Las preferencias de rendimiento permiten cambiar el motor de PDF. Si un document
 
 En **Biblioteca** configura orden, apertura al hacer clic y libros de subcarpetas. La precarga y concurrencia de miniaturas afectan a la preparación de portadas. Reduce la concurrencia si el equipo está ocupado.
 
+## Copia de seguridad y restauración
+
+**Ajustes → Avanzado → Copia de seguridad y restauración**
+
+Transfiere tu biblioteca, carpetas, posición de lectura, marcadores, portadas y ajustes de visualización entre ediciones o equipos. [Copia de seguridad y restauración](/es/privacy/)
+
 ## Datos y servicios
 
 **Avanzado** contiene la comprobación manual y de inicio de actualizaciones y **Abrir carpeta de datos de usuario** para copias de seguridad. IA y modelos están en **IA**. Activación y dispositivos en **Licencia**. Consulta [IA](/es/features/ai-assistant/), [licencias](/es/plans-and-licenses/) y [privacidad](/es/privacy/) para entender sus condiciones.

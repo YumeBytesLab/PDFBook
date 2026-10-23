@@ -19,6 +19,12 @@ Les options de performance changent le moteur PDF. Si un document s’affiche ma
 
 Dans **Bibliothèque**, réglez tri initial, ouverture au clic et inclusion des sous-dossiers. Préchargement et concurrence concernent les couvertures : réduisez la concurrence si l’ordinateur est occupé.
 
+## Sauvegarde et restauration
+
+**Paramètres → Avancé → Sauvegarde et restauration**
+
+Transférez bibliothèque, dossiers, positions de lecture, signets, couvertures et réglages d’affichage entre éditions ou ordinateurs. [Sauvegarde et restauration](/fr/privacy/)
+
 ## Données et connexions
 
 **Avancé** contient les contrôles de mise à jour et **Ouvrir le dossier des données utilisateur**, utile pour sauvegarder. Fournisseur et modèle sont dans **IA**, activation et appareils dans **Licence**. Voir [IA](/fr/features/ai-assistant/), [licences](/fr/plans-and-licenses/) et [confidentialité](/fr/privacy/).

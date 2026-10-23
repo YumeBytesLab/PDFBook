@@ -9,7 +9,25 @@ Leer, guardar la biblioteca, crear y convertir PDF y extraer imágenes se realiz
 
 Si renombras o mueves un original fuera de la app, puede romperse la ruta. Mantén disponibles los archivos y unidades externas y haz copias de ellos por separado.
 
-## Haz una copia útil
+## Copia de seguridad y restauración
+
+Transfiere tu biblioteca, carpetas, posición de lectura, marcadores, portadas y ajustes de visualización entre ediciones o equipos.
+
+1. **Ajustes → Avanzado → Copia de seguridad y restauración**
+2. **Incluir archivos originales** — Copia los archivos locales de la biblioteca. Los libros en línea conservan sus URL sin descargarse. Revisa los originales que falten antes de exportar.
+3. **Exportar copia** — Elige un destino para crear una carpeta de copia de PDFBook. Conserva toda la carpeta y selecciónala para restaurar.
+
+**Sin archivos originales:** No se copian los originales. Para leer, los archivos deben seguir en sus ubicaciones originales.
+
+**Importar copia → Revisar copia → Restaurar y reiniciar**
+
+> Entiendo que se reemplazarán mi biblioteca y ajustes de visualización y se reiniciará PDFBook. No se fusionan bibliotecas.
+
+Antes de reemplazar, se guarda una copia importable en backups, dentro de la carpeta de datos. Los originales existentes no se eliminan. Añade de nuevo las carpetas vigiladas después de restaurar. No se conserva el análisis automático para evitar duplicados o explorar carpetas equivocadas.
+
+No incluye claves API, ajustes ni historial de IA, contraseñas PDF guardadas ni licencias. Se conservan los ajustes de IA y la licencia actuales.
+
+## Copia manual de los datos de la aplicación
 
 1. Abre **Ajustes → Avanzado → Abrir carpeta de datos de usuario**.
 2. Cierra PDFBook antes de copiar para evitar cambios durante la copia.

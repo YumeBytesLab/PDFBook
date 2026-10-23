@@ -9,7 +9,25 @@ Lettura, libreria, creazione, conversione ed estrazione immagini funzionano sul 
 
 Spostare o rinominare fuori dall’app può interrompere un percorso. Mantieni disponibili file e dischi esterni e salvali anche separatamente.
 
-## Backup completo
+## Backup e ripristino
+
+Trasferisci libreria, cartelle, posizioni di lettura, segnalibri, copertine e impostazioni di visualizzazione tra edizioni o computer.
+
+1. **Impostazioni → Avanzate → Backup e ripristino**
+2. **Includi file originali** — Copia i file locali della libreria. I libri online mantengono gli URL senza scaricamento. Controlla gli originali mancanti prima di esportare.
+3. **Esporta backup** — Scegli una destinazione per creare una cartella di backup PDFBook. Conserva l’intera cartella e selezionala per ripristinare.
+
+**Senza i file originali:** Gli originali non vengono copiati. Per leggere servono ancora i file nelle posizioni originali.
+
+**Importa backup → Verifica backup → Ripristina e riavvia**
+
+> Comprendo che la libreria e le impostazioni di visualizzazione attuali saranno sostituite e PDFBook verrà riavviato. Le librerie non vengono unite.
+
+Prima della sostituzione, viene salvato un backup importabile in backups nella cartella dati. Gli originali esistenti non vengono eliminati. Aggiungi nuovamente le cartelle monitorate dopo il ripristino. La scansione automatica non viene trasferita per evitare duplicati o cartelle indesiderate.
+
+Sono esclusi chiavi API, impostazioni e cronologia IA, password PDF salvate e licenze. Le impostazioni IA e la licenza attuali restano invariate.
+
+## Copia manuale dei dati dell’app
 
 1. Apri **Impostazioni → Avanzate → Apri cartella dati utente**.
 2. Chiudi PDFBook per evitare cambiamenti durante la copia.

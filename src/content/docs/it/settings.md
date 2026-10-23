@@ -19,6 +19,12 @@ Le preferenze di prestazioni cambiano il motore PDF. Se un documento appare male
 
 In **Libreria** scegli ordinamento, apertura al clic e libri delle sottocartelle. Precaricamento e concorrenza riguardano le copertine: riduci la concorrenza se il computer è occupato.
 
+## Backup e ripristino
+
+**Impostazioni → Avanzate → Backup e ripristino**
+
+Trasferisci libreria, cartelle, posizioni di lettura, segnalibri, copertine e impostazioni di visualizzazione tra edizioni o computer. [Backup e ripristino](/it/privacy/)
+
 ## Dati e servizi
 
 **Avanzate** contiene controlli aggiornamenti e **Apri cartella dati utente** per il backup. Provider e modelli sono in **IA**, attivazione e dispositivi in **Licenza**. Consulta [IA](/it/features/ai-assistant/), [licenze](/it/plans-and-licenses/) e [privacy](/it/privacy/).

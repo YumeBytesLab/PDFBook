@@ -9,7 +9,25 @@ Lecture, bibliothèque, création, conversion et extraction d’images fonctionn
 
 Déplacer ou renommer un original hors de l’application peut rompre son chemin. Gardez accessibles fichiers et disques externes et sauvegardez-les séparément.
 
-## Sauvegarder correctement
+## Sauvegarde et restauration
+
+Transférez bibliothèque, dossiers, positions de lecture, signets, couvertures et réglages d’affichage entre éditions ou ordinateurs.
+
+1. **Paramètres → Avancé → Sauvegarde et restauration**
+2. **Inclure les fichiers originaux** — Copie les fichiers locaux de la bibliothèque. Les livres en ligne conservent leur URL sans téléchargement. Vérifiez les originaux manquants avant l’exportation.
+3. **Exporter une sauvegarde** — Choisissez une destination pour créer un dossier de sauvegarde PDFBook. Conservez le dossier entier et sélectionnez-le pour restaurer.
+
+**Sans les fichiers originaux:** Les originaux ne sont pas copiés. La lecture nécessite toujours les fichiers à leur emplacement initial.
+
+**Importer une sauvegarde → Vérifier la sauvegarde → Restaurer et redémarrer**
+
+> Je comprends que ma bibliothèque et mes réglages d’affichage seront remplacés et que PDFBook redémarrera. Les bibliothèques ne seront pas fusionnées.
+
+Avant le remplacement, une sauvegarde importable est enregistrée dans backups, dans le dossier de données. Les originaux existants ne sont pas supprimés. Ajoutez à nouveau les dossiers surveillés après la restauration. L’analyse automatique n’est pas transférée afin d’éviter doublons et dossiers involontaires.
+
+Les clés API, réglages et historique IA, mots de passe PDF enregistrés et licences sont exclus. Vos réglages IA et votre licence actuels sont conservés.
+
+## Copie manuelle des données de l’application
 
 1. Ouvrez **Paramètres → Avancé → Ouvrir le dossier des données utilisateur**.
 2. Fermez PDFBook pour éviter des modifications pendant la copie.

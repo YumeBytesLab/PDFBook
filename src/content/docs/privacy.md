@@ -9,7 +9,25 @@ Reading PDFs, storing the library, creating PDFs, converting files and extractin
 
 Renaming or moving a PDF outside the app can break its saved path. Keep originals available, including on removable drives, and back them up independently of the catalog.
 
-## Make a useful backup
+## Backup and restore
+
+Transfer your library, folders, reading positions, bookmarks, covers and display settings between editions or computers.
+
+1. **Settings → Advanced → Backup and restore**
+2. **Include original files** — Copies local files in your library. Online books keep their URLs and are not downloaded. Missing files must be fixed before exporting.
+3. **Export backup** — Choose a destination to create a PDFBook backup folder. Keep the whole folder together. To restore, select that backup folder.
+
+**Without original files:** Original files are not copied. Reading will still require files at their original locations.
+
+**Import backup → Review backup → Restore and restart**
+
+> I understand that this replaces my current library and display settings and restarts PDFBook. It does not merge libraries.
+
+Before replacement, an importable safety backup is saved in the data folder’s backups folder. Existing source files are not deleted. Watch folders must be added again after restoring. Automatic scanning stays off to prevent duplicates or scanning unintended folders.
+
+API keys, AI settings and chat history, saved PDF passwords and licenses are excluded. Your current AI settings and license are kept.
+
+## Manual copy of application data
 
 1. Open **Settings → Advanced → Open user data folder**.
 2. Close PDFBook before copying application data so files are not changing during the copy.

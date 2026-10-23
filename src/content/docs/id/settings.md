@@ -19,6 +19,12 @@ Opsi performa mengganti mesin PDF. Bila dokumen tergambar salah, coba mesin lain
 
 Di **Perpustakaan**, pilih urutan awal, buka dengan klik, dan buku subfolder. Pramuat dan konkurensi memengaruhi persiapan sampul. Kurangi konkurensi jika komputer sibuk.
 
+## Cadangkan dan pulihkan
+
+**Pengaturan → Lanjutan → Cadangkan dan pulihkan**
+
+Pindahkan pustaka, folder, posisi baca, markah, sampul, dan pengaturan tampilan antar edisi atau komputer. [Cadangkan dan pulihkan](/id/privacy/)
+
 ## Data dan layanan
 
 **Lanjutan** memuat pemeriksaan pembaruan dan **Buka folder data pengguna** untuk cadangan. Penyedia dan model di **AI**, aktivasi dan perangkat di **Lisensi**. Baca [AI](/id/features/ai-assistant/), [lisensi](/id/plans-and-licenses/), serta [privasi](/id/privacy/) untuk ketentuannya.

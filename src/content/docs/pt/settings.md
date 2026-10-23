@@ -19,6 +19,12 @@ As opções de desempenho trocam o motor PDF. Se um arquivo aparecer incorretame
 
 Em **Biblioteca**, escolha ordenação, abertura ao clicar e inclusão de subpastas. Pré-carregamento e concorrência preparam capas. Diminua a concorrência se o computador estiver ocupado.
 
+## Backup e restauração
+
+**Configurações → Avançado → Backup e restauração**
+
+Transfira biblioteca, pastas, posições de leitura, marcadores, capas e configurações de exibição entre edições ou computadores. [Backup e restauração](/pt/privacy/)
+
 ## Dados e serviços
 
 **Avançado** contém as verificações de atualização e **Abrir pasta de dados do usuário**, usado no backup. Provedor e modelo ficam em **IA**, ativação e dispositivos em **Licença**. Saiba mais em [IA](/pt/features/ai-assistant/), [licenças](/pt/plans-and-licenses/) e [privacidade](/pt/privacy/).

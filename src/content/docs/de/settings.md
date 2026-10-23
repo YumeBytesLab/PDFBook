@@ -19,6 +19,12 @@ Die Leistungseinstellungen wechseln den PDF-Motor. Bei fehlerhaftem Aufbau probi
 
 Unter **Bibliothek** wählst du Sortierung, Öffnen beim Klick und Bücher aus Unterordnern. Vorladen und Gleichzeitigkeit beeinflussen die Cover-Erstellung. Reduziere die Zahl bei hoher Rechnerlast.
 
+## Sichern und wiederherstellen
+
+**Einstellungen → Erweitert → Sichern und wiederherstellen**
+
+Übertrage Bibliothek, Ordner, Lesepositionen, Lesezeichen, Cover und Anzeigeeinstellungen zwischen Editionen oder Computern. [Sichern und wiederherstellen](/de/privacy/)
+
 ## Daten und Dienste
 
 **Erweitert** enthält Start- und manuelle Updateprüfung sowie **Benutzerdatenordner öffnen** für Sicherungen. Anbieter und Modelle liegen unter **KI**, Aktivierung und Geräte unter **Lizenz**. Mehr in [KI](/de/features/ai-assistant/), [Lizenzen](/de/plans-and-licenses/) und [Datenschutz](/de/privacy/).

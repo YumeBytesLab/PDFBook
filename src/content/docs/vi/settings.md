@@ -19,6 +19,12 @@ Cài đặt hiệu năng đổi bộ máy PDF. Nếu tài liệu hiển thị sa
 
 Trong **Thư viện**, chọn cách sắp xếp, mở khi nhấp và sách từ thư mục con. Tải trước và số tác vụ đồng thời ảnh hưởng chuẩn bị bìa. Giảm số tác vụ nếu máy bận.
 
+## Sao lưu và khôi phục
+
+**Cài đặt → Nâng cao → Sao lưu và khôi phục**
+
+Chuyển thư viện, cấu trúc thư mục, vị trí đọc, dấu trang, ảnh bìa và cài đặt hiển thị giữa các bản phân phối hoặc máy tính. [Sao lưu và khôi phục](/vi/privacy/)
+
 ## Dữ liệu và dịch vụ
 
 **Nâng cao** có kiểm tra cập nhật và **Mở thư mục dữ liệu người dùng** để sao lưu. Nhà cung cấp và mô hình ở **AI**, kích hoạt và thiết bị ở **Giấy phép**. Đọc [AI](/vi/features/ai-assistant/), [giấy phép](/vi/plans-and-licenses/) và [riêng tư](/vi/privacy/) để hiểu điều kiện.

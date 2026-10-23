@@ -19,6 +19,12 @@ Performance choices switch the PDF rendering engine. If a particular document dr
 
 In **Library**, choose the initial sort order, click-to-open behavior and whether a folder view includes subfolder books. Thumbnail prefetch and concurrency affect how eagerly covers are prepared. Reduce concurrency if your computer becomes busy.
 
+## Backup and restore
+
+**Settings → Advanced → Backup and restore**
+
+Transfer your library, folders, reading positions, bookmarks, covers and display settings between editions or computers. [Backup and restore](/privacy/)
+
 ## Updates, data and connected services
 
 **Advanced** contains the startup update preference, manual update check and **Open user data folder**. Use the data-folder action when making a backup or collecting a specific support file.
